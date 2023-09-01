@@ -1,0 +1,137 @@
+.title44 {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 2.5rem;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  width: 32.5rem;
+}
+.avatar-icon,
+.title45 {
+  position: relative;
+  overflow: hidden;
+}
+.avatar-icon {
+  border-radius: var(--br-13xl);
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.title45 {
+  flex: 1;
+  line-height: 1.75rem;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 1.25rem;
+}
+.avatar-parent {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.avatar,
+.avatar-inner,
+.avatar-parent,
+.user {
+  display: flex;
+  justify-content: flex-start;
+}
+.avatar-inner {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.avatar,
+.user {
+  flex-direction: row;
+  align-items: center;
+}
+.avatar {
+  flex: 1;
+}
+.user {
+  align-self: stretch;
+}
+.atticus-he-was {
+  margin: 0;
+}
+.title46 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--lable-large-size);
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  font-family: var(--body-large);
+  color: var(--white);
+  text-align: center;
+  display: -webkit-inline-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card1 {
+  flex: 1;
+  border-radius: var(--br-7xs);
+  background-color: var(--primary);
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--padding-base);
+  justify-content: center;
+  gap: var(--gap-base);
+}
+.card1,
+.container10,
+.list7 {
+  display: flex;
+  align-items: center;
+}
+.list7 {
+  align-self: stretch;
+  flex-direction: row;
+  padding: var(--padding-xl) 0;
+  justify-content: center;
+  text-align: left;
+  font-size: var(--title-large-size);
+  color: var(--grey);
+}
+.container10 {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+  z-index: 0;
+}
+.section-child10 {
+  position: absolute;
+  margin: 0 !important;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 0.03rem;
+  z-index: 1;
+}
+.section20 {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-13xl) var(--padding-71xl);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: var(--gap-41xl);
+  z-index: 5;
+  text-align: center;
+  font-size: var(--heading-large-size);
+  color: var(--secondary);
+  font-family: var(--title-medium);
+}

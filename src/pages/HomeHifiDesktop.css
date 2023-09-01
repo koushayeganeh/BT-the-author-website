@@ -1,0 +1,26 @@
+.home-hifi-desktop {
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-61xl) 0 0;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* .home-hifi-desktop {
+  position: relative;
+  background-color: var(--white);
+  width: 1200px;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-61xl) 0 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+} */

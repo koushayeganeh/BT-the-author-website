@@ -1,0 +1,119 @@
+.title39 {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  line-height: 2.5rem;
+  font-weight: 700;
+  font-family: inherit;
+}
+.container8 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 0;
+}
+.frame,
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  align-self: stretch;
+  position: relative;
+  line-height: 6.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 6.25rem;
+  flex-shrink: 0;
+}
+.frame {
+  border-radius: var(--br-31xl);
+  background-color: var(--color-gray-100);
+  width: 6.25rem;
+  flex-direction: column;
+  font-size: var(--font-size-43xl-5);
+}
+.subtitle19,
+.title40 {
+  align-self: stretch;
+  position: relative;
+  line-height: 1.75rem;
+}
+.subtitle19 {
+  font-size: var(--title-medium-size);
+  letter-spacing: 0.15px;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: var(--color-gray-200);
+}
+.title-parent11 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.subtitle20 {
+  align-self: stretch;
+  position: relative;
+  line-height: 1.75rem;
+  color: var(--polar);
+}
+.item,
+.list5 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.item {
+  flex-direction: column;
+  padding: var(--padding-xs) 0;
+  align-items: center;
+  gap: var(--gap-xl);
+}
+.list5 {
+  border-radius: var(--br-xs);
+  background-color: var(--white);
+  flex-direction: row;
+  padding: var(--padding-xl) 0;
+  align-items: flex-start;
+  z-index: 1;
+  text-align: center;
+  font-size: var(--title-large-size);
+  color: var(--color-black);
+}
+.section-child8 {
+  position: absolute;
+  margin: 0 !important;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 0.03rem;
+  z-index: 2;
+}
+.section18 {
+  align-self: stretch;
+  background-color: var(--primary);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-13xl) var(--padding-71xl);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: var(--gap-41xl);
+  z-index: 3;
+  text-align: left;
+  font-size: var(--heading-large-size);
+  color: var(--white);
+  font-family: var(--title-medium);
+}

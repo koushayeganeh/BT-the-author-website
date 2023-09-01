@@ -1,0 +1,128 @@
+@keyframes shadow-inset-center {
+  0% {
+    box-shadow: inset 0 0 0 0 transparent;
+  }
+  to {
+    box-shadow: inset 0 0 14px 0 rgb(0 0 0/50%);
+  }
+}
+.image-7-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18.13rem;
+  height: 20.56rem;
+  object-fit: cover;
+}
+.image9 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  background-color: var(--color-gray-100);
+}
+.image-container11 {
+  width: 18.13rem;
+  height: 20rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.subtitle18,
+.title37 {
+  align-self: stretch;
+  position: relative;
+  line-height: 1.75rem;
+}
+.subtitle18 {
+  font-size: var(--lable-large-size);
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  font-family: var(--body-large);
+}
+.title-parent10 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.title38 {
+  position: relative;
+  font-size: var(--lable-large-size);
+  letter-spacing: 0.1px;
+  line-height: 1.25rem;
+  font-weight: 500;
+  font-family: var(--title-medium);
+  color: var(--white);
+  text-align: left;
+}
+.button3,
+.frame-parent,
+.primary3 {
+  display: flex;
+  flex-direction: column;
+}
+.primary3,
+.primary3:hover {
+  background-color: var(--primary);
+}
+.primary3 {
+  border-radius: var(--br-5xs);
+  width: 11.63rem;
+  height: 3.88rem;
+  padding: var(--padding-xs);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.primary3:hover {
+  animation: 0.7s ease-in-out 0s 1 normal none shadow-inset-center;
+  opacity: 1;
+}
+.button3,
+.frame-parent {
+  justify-content: flex-start;
+}
+.button3 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  overflow: hidden;
+  align-items: flex-start;
+}
+.frame-parent {
+  flex: 1;
+  align-items: flex-end;
+  gap: var(--gap-13xl);
+}
+.article13,
+.list4 {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+}
+.article13 {
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  flex-direction: row;
+  padding: var(--padding-base);
+  align-items: flex-start;
+  gap: var(--gap-xl);
+  mix-blend-mode: normal;
+}
+.list4 {
+  background-color: var(--grey);
+  flex-direction: column;
+  padding: var(--padding-45xl) var(--padding-71xl);
+  align-items: center;
+  z-index: 2;
+  text-align: left;
+  font-size: var(--title-large-size);
+  color: var(--color-black);
+  font-family: var(--title-medium);
+}

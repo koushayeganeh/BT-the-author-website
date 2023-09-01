@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --title-medium: Roboto;
+  --body-large: "Noto Serif";
+
+  /* font sizes */
+  --lable-large-size: 1.13rem;
+  --font-size-9xl: 1.75rem;
+  --font-size-xl: 1.25rem;
+  --heading-large-size: 2.38rem;
+  --title-large-size: 1.5rem;
+  --font-size-xs: 0.75rem;
+  --title-medium-size: 1rem;
+  --font-size-43xl-5: 3.91rem;
+  --font-size-sm: 0.88rem;
+  --font-size-21xl: 2.5rem;
+
+  /* Colors */
+  --white: #fff;
+  --secondary: #151957;
+  --primary: #44adff;
+  --grey: #f0f4f7;
+  --color-gray-200: rgba(0, 0, 0, 0.5);
+  --color-gray-300: rgba(0, 0, 0, 0.1);
+  --color-gray-100: rgba(0, 0, 0, 0.05);
+  --color-black: #000;
+  --color-gainsboro-100: rgba(217, 217, 217, 0);
+  --color-gainsboro-200: rgba(217, 217, 217, 0.5);
+  --polar: #d51b1b;
+
+  /* Gaps */
+  --gap-xl: 1.25rem;
+  --gap-21xl: 2.5rem;
+  --gap-41xl: 3.75rem;
+  --gap-5xl: 1.5rem;
+  --gap-base: 1rem;
+  --gap-5xs: 0.5rem;
+  --gap-15xl: 2.13rem;
+  --gap-9xs: 0.25rem;
+  --gap-7xs: 0.38rem;
+  --gap-13xl: 2rem;
+
+  /* Paddings */
+  --padding-61xl: 5rem;
+  --padding-xl: 1.25rem;
+  --padding-71xl: 5.63rem;
+  --padding-13xl: 2rem;
+  --padding-9xs: 0.25rem;
+  --padding-22xl: 2.56rem;
+  --padding-12xl: 1.94rem;
+  --padding-xs: 0.75rem;
+  --padding-base: 1rem;
+  --padding-45xl: 4rem;
+  --padding-5xs: 0.5rem;
+  --padding-41xl: 3.75rem;
+  --padding-11xs: 0.13rem;
+
+  /* border radiuses */
+  --br-81xl: 100px;
+  --br-7xs: 6px;
+  --br-5xs: 8px;
+  --br-13xl: 32px;
+  --br-11xs: 2px;
+  --br-xs: 12px;
+  --br-31xl: 50px;
+}

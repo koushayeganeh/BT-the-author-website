@@ -1,0 +1,32 @@
+.container12,
+.section23,
+.title51 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title51 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  line-height: 1.75rem;
+}
+.container12,
+.section23 {
+  flex-direction: row;
+}
+.container12 {
+  flex: 1;
+  height: 6.25rem;
+}
+.section23 {
+  align-self: stretch;
+  background-color: var(--primary);
+  overflow: hidden;
+  padding: 0 var(--padding-71xl);
+  z-index: 8;
+  text-align: center;
+  font-size: var(--font-size-xl);
+  color: var(--white);
+  font-family: var(--title-medium);
+}

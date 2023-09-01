@@ -1,0 +1,106 @@
+.image10 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  background-color: var(--color-gainsboro-100);
+}
+.image-container12 {
+  width: 6.19rem;
+  height: 8.75rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-image: url(/public/image-container1@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.subtitle21,
+.subtitle22,
+.title41 {
+  align-self: stretch;
+  position: relative;
+  line-height: 1.75rem;
+}
+.subtitle21,
+.subtitle22 {
+  line-height: 1.5rem;
+}
+.subtitle21 {
+  font-size: var(--title-medium-size);
+  letter-spacing: 0.15px;
+  font-weight: 500;
+  color: var(--color-gray-200);
+}
+.subtitle22 {
+  font-size: var(--lable-large-size);
+  letter-spacing: 0.5px;
+  font-family: var(--body-large);
+}
+.label-text28 {
+  position: relative;
+  line-height: 1rem;
+}
+.label-normal28 {
+  border-radius: var(--br-11xs);
+  background-color: var(--color-gainsboro-200);
+  border: 0.5px solid var(--color-gray-300);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-11xs) var(--padding-9xs);
+  align-items: center;
+  justify-content: center;
+}
+.selection7,
+.title-parent12 {
+  display: flex;
+  justify-content: flex-start;
+}
+.selection7 {
+  align-self: stretch;
+  overflow: hidden;
+  flex-direction: row;
+  padding: var(--padding-9xs) 0;
+  align-items: center;
+  gap: var(--gap-7xs);
+  font-size: var(--font-size-xs);
+}
+.title-parent12 {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.article14,
+.row5 {
+  display: flex;
+  flex-direction: row;
+}
+.article14 {
+  flex: 1;
+  border-radius: var(--br-7xs);
+  border: 1px solid var(--color-gray-300);
+  padding: var(--padding-base);
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-base);
+}
+.row5 {
+  align-self: stretch;
+  background-color: var(--white);
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--title-large-size);
+  color: var(--color-black);
+  font-family: var(--title-medium);
+}
+.row5:hover {
+  background-color: var(--primary);
+  gap: var(--gap-21xl);
+}
