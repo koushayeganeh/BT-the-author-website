@@ -11,12 +11,12 @@
 .avatar-icon,
 .title45 {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .avatar-icon {
   border-radius: var(--br-13xl);
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   flex-shrink: 0;
   object-fit: cover;
 }
@@ -31,7 +31,7 @@
 .avatar-parent {
   align-self: stretch;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--gap-5xs);
 }
 .avatar,
@@ -89,6 +89,13 @@
 .container10,
 .list7 {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card-content-row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   align-items: center;
 }
 .list7 {
@@ -106,6 +113,8 @@
   justify-content: flex-start;
   gap: var(--gap-5xl);
   z-index: 0;
+  width: 100%;
+  max-width: var(--max-inner-width);
 }
 .section-child10 {
   position: absolute;

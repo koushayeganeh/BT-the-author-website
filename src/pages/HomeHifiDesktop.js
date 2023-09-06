@@ -13,6 +13,10 @@ import "./HomeHifiDesktop.css";
 const HomeHifiDesktop = () => {
   const navigate = useNavigate();
 
+  const onTabText0Click = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
   const onTabText1Click = useCallback(() => {
     navigate("/author");
   }, [navigate]);
@@ -36,6 +40,7 @@ const HomeHifiDesktop = () => {
   return (
     <div className="home-hifi-desktop">
       <TopBar
+        onTabText0Click={onTabText0Click}
         onTabText1Click={onTabText1Click}
         onTabText2Click={onTabText2Click}
         onTabText3Click={onTabText3Click}

@@ -117,3 +117,23 @@
   color: var(--white);
   font-family: var(--title-medium);
 }
+
+.section18-inner-content {
+  align-self: stretch;
+  background-color: var(--primary);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-13xl) var(--padding-71xl);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: var(--gap-41xl);
+  z-index: 3;
+  text-align: left;
+  font-size: var(--heading-large-size);
+  color: var(--white);
+  font-family: var(--title-medium);
+  width: 100%;
+  max-width: var(--max-inner-width);
+}

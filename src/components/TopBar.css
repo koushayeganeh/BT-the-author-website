@@ -14,6 +14,7 @@
 .title36 {
   position: relative;
   font-weight: 500;
+  padding: 4rem 2rem;
 }
 .title36 {
   margin: 0;
@@ -21,6 +22,8 @@
   font-size: inherit;
   line-height: 2.25rem;
   font-family: inherit;
+  padding: 4rem 0;
+  font-size: larger;
 }
 .tab36:hover,
 .title36:hover {
@@ -42,7 +45,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: var(--gap-21xl);
+  gap: 1rem;
   text-align: left;
   font-size: var(--lable-large-size);
   color: var(--secondary);
@@ -50,7 +53,7 @@
 }
 .top-bar7 {
   margin: 0 !important;
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   right: 0;
@@ -62,6 +65,22 @@
   padding: var(--padding-xl) var(--padding-71xl);
   box-sizing: border-box;
   gap: var(--gap-xl);
-  z-index: 0;
+  z-index: 1000;
   font-size: var(--font-size-9xl);
+}
+.top-bar7-content {
+  margin: 0;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: left;
+  font-size: var(--lable-large-size);
+  color: var(--secondary);
+  font-family: var(--title-medium);
+  width: 100%;
+  max-width: var(--max-inner-width);
+  top: 0;
 }

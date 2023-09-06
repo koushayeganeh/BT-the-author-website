@@ -6,11 +6,20 @@
     box-shadow: inset 0 0 14px 0 rgb(0 0 0/50%);
   }
 }
+
+@keyframes shadow-inset-center-out {
+  0% {
+    box-shadow: inset 0 0 14px 0 rgb(0 0 0/50%);
+  }
+  to {
+    box-shadow: inset 0 0 0 0 transparent;
+  }
+}
 .image-7-icon {
   position: absolute;
   top: 0;
   left: 0;
-  width: 18.13rem;
+  width: 19rem;
   height: 20.56rem;
   object-fit: cover;
 }
@@ -80,7 +89,11 @@
   cursor: pointer;
 }
 .primary3:hover {
-  animation: 0.7s ease-in-out 0s 1 normal none shadow-inset-center;
+  animation: 0.4s ease-in-out 0s 1 forwards shadow-inset-center;
+  opacity: 1;
+}
+.primary3:not(:hover) {
+  animation: 0.2s ease-in-out 0s 1 forwards shadow-inset-center-out;
   opacity: 1;
 }
 .button3,
@@ -112,14 +125,19 @@
   flex-direction: row;
   padding: var(--padding-base);
   align-items: flex-start;
+  align-self: center;
   gap: var(--gap-xl);
   mix-blend-mode: normal;
+  width: 100%;
+  max-width: var(--max-inner-width);
+  top: 0;
 }
 .list4 {
   background-color: var(--grey);
   flex-direction: column;
   padding: var(--padding-45xl) var(--padding-71xl);
   align-items: center;
+  justify-content: center;
   z-index: 2;
   text-align: left;
   font-size: var(--title-large-size);

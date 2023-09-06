@@ -1,14 +1,36 @@
+@keyframes change-color {
+  0% {
+    color: var(--primary);
+  }
+  to {
+    color: var(--secondary);
+  }
+}
+
+@keyframes change-color-out {
+  0% {
+    color: var(--secondary);
+  }
+  to {
+    color: var(--primary);
+  }
+}
+
 .image-27-icon1 {
   position: relative;
   width: 6.25rem;
   height: 6.25rem;
   object-fit: cover;
   cursor: pointer;
+  color: var(--primary);
 }
 .image-27-icon1:hover {
-  border: 4px solid var(--primary);
-  box-sizing: border-box;
+  animation: 0.4s ease-in-out 0s 1 forwards change-color;
 }
+.image-27-icon1:not(:hover) {
+  animation: 0.2s ease-in-out 0s 1 forwards change-color-out;
+}
+
 .image-27-group,
 .image-container14,
 .image12 {
@@ -35,6 +57,8 @@
   overflow: hidden;
   padding: var(--padding-9xs) 0;
   z-index: 0;
+  width: 100%;
+  max-width: var(--max-inner-width);
 }
 .section-child12 {
   position: absolute;

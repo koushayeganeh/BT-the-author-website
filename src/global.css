@@ -29,7 +29,7 @@ body {
   --color-gray-200: rgba(0, 0, 0, 0.5);
   --color-gray-300: rgba(0, 0, 0, 0.1);
   --color-gray-100: rgba(0, 0, 0, 0.05);
-  --color-black: #000;
+  --color-black: #111111;
   --color-gainsboro-100: rgba(217, 217, 217, 0);
   --color-gainsboro-200: rgba(217, 217, 217, 0.5);
   --polar: #d51b1b;
@@ -60,6 +60,8 @@ body {
   --padding-5xs: 0.5rem;
   --padding-41xl: 3.75rem;
   --padding-11xs: 0.13rem;
+
+  --max-inner-width: 1600px;
 
   /* border radiuses */
   --br-81xl: 100px;

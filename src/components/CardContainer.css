@@ -1,3 +1,25 @@
+@keyframes change-background-color {
+  0% {
+    background-color: var(--white);
+    color: var(--color-black);
+  }
+  to {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}
+
+@keyframes change-background-color-out {
+  0% {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+  to {
+    background-color: var(--white);
+    color: var(--color-black);
+  }
+}
+
 .image10 {
   align-self: stretch;
   flex: 1;
@@ -101,6 +123,8 @@
   font-family: var(--title-medium);
 }
 .row5:hover {
-  background-color: var(--primary);
-  gap: var(--gap-21xl);
+  animation: 0.2s ease-in-out 0s 1 forwards change-background-color;
+}
+.row5:not(:hover) {
+  animation: 0.2s ease-in-out 0s 1 forwards change-background-color-out;
 }

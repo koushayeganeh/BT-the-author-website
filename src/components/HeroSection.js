@@ -200,7 +200,7 @@ const HeroSection = () => {
           color: "white",
           fontFamily: "Arial, sans-serif",
           fontSize: "4rem",
-          margin: "-60px",
+          margin: "-100px",
           overflow: "hidden",
         }}
       >
