@@ -1,10 +1,29 @@
+@keyframes change-color {
+  0% {
+    color: var(--white);
+  }
+  to {
+    color: var(--secondary);
+  }
+}
+
+@keyframes change-color-out {
+  0% {
+    color: var(--secondary);
+  }
+  to {
+    color: var(--white);
+  }
+}
+
 .title44 {
   margin: 0;
   position: relative;
-  font-size: inherit;
-  line-height: 2.5rem;
+  font-family: var(--font-sans-serif);
+  font-size: var(--font-size-heading-large);
+  line-height: var(--font-size-heading-large-height);
   font-weight: 700;
-  font-family: inherit;
+  letter-spacing: 0.15rem;
   display: inline-block;
   width: 32.5rem;
 }
@@ -56,17 +75,18 @@
 }
 .user {
   align-self: stretch;
+  display: none;
 }
 .atticus-he-was {
   margin: 0;
+  font-size: var(--font-size-read-large);
+  line-height: var(--font-size-read-large-height);
+  font-family: var(--font-serif);
 }
 .title46 {
   align-self: stretch;
   position: relative;
-  font-size: var(--lable-large-size);
   letter-spacing: 0.5px;
-  line-height: 1.5rem;
-  font-family: var(--body-large);
   color: var(--white);
   text-align: center;
   display: -webkit-inline-box;
@@ -75,13 +95,25 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+.nav-button {
+  background-color: transparent;
+  color: var(--white);
+  border: none;
+  font-size: 2rem;
+}
+
+.nav-button:hover {
+  animation: 0.4s ease-in-out 0s 1 forwards change-color;
+}
+
 .card1 {
   flex: 1;
   border-radius: var(--br-7xs);
   background-color: var(--primary);
   overflow: hidden;
   flex-direction: column;
-  padding: var(--padding-base);
+  padding: 3rem;
   justify-content: center;
   gap: var(--gap-base);
 }
@@ -143,4 +175,34 @@
   font-size: var(--heading-large-size);
   color: var(--secondary);
   font-family: var(--title-medium);
+}
+
+@media (max-width: 960px) {
+  .section20 {
+    padding: var(--padding-13xl) var(--padding-13xl);
+  }
+  .title44 {
+    font-size: var(--font-size-heading-medium);
+    line-height: var(--font-size-heading-medium-height);
+  }
+}
+
+@media (max-width: 768px) {
+  .section20 {
+    padding: var(--padding-xl) var(--padding-5xs);
+  }
+  .container10 {
+    gap: var(--gap-xl);
+  }
+  .list7 {
+    padding: 0;
+  }
+  .card1 {
+    padding: 1rem;
+    gap: var(--gap-5xs);
+  }
+  .title44 {
+    font-size: var(--font-size-heading-small);
+    line-height: var(--font-size-heading-small-height);
+  }
 }

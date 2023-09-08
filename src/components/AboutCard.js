@@ -23,27 +23,32 @@ const AboutCard = () => {
         </div>
         <div className="frame-parent">
           <div className="title-parent10">
-            <div className="title37">About</div>
+            <div className="title37">Hakkında</div>
             <div className="subtitle18">
-              "At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non
-              provident, similique sunt in culpa qui officia deserunt mollitia
-              animi, id est laborum et dolorum fuga. Et harum quidem rerum
-              facilis est et expedita distinctio. Nam libero tempore, cum soluta
-              nobis est eligendi optio cumque nihil impedit quo minus id quod
-              maxime placeat facere possimus, omnis voluptas assumenda est,
-              omnis dolor repellendus. Temporibus autem quibusdam et aut
-              officiis debitis aut rerum necessitatibus saepe eveniet ut et
-              voluptates repudiandae sint et molestiae non recusandae. Itaque
-              earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-              voluptatibus maiores alias consequatur aut perferendis doloribus
-              asperiores repellat."
+              <p>
+                Barış Tayfün, insan deneyimi, ruhsallık ve fiziksel yaşam
+                üzerine odaklanan hikayeler yazan bir yazardır. Kendisi,
+                insanların derin duygusal bağlarını ve içsel yolculuklarını
+                keşfetmeye olan tutkusuyla bilinir. Barış, eserlerinde ruhsal
+                büyüme, insan ilişkileri ve yaşamın anlamı gibi evrensel
+                temaları işlerken, okuyucularını derin düşünceye ve içsel keşfe
+                teşvik etmek için kelimeleri ustalıkla kullanır. Yazarlık
+                kariyerine başladığı günden bu yana, kitapları birçok okur
+                tarafından ilgiyle takip edilmektedir ve eserleri ruhu ve bedeni
+                birleştiren derin bir deneyim sunar.
+              </p>
+              <p>
+                Barış Tayfün, hem düşünce hem de kalp dokusunu dokuyan,
+                okuyuculara içsel bir yolculuk vaat eden, ilham verici
+                eserleriyle tanınan bir yazardır. Onun kelimeleri, insanların
+                hayatın derinliklerine inmelerine ve kendi iç dünyalarını
+                keşfetmelerine rehberlik eder.
+              </p>
             </div>
           </div>
           <button className="button3" id="button-read-more">
             <div className="primary3" onClick={onPrimaryContainerClick}>
-              <div className="title38">Read More</div>
+              <div className="title38">Devamını Oku</div>
             </div>
           </button>
         </div>

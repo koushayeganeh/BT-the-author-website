@@ -13,18 +13,17 @@
 .section17 {
   align-self: stretch;
   height: 32.5rem;
-  overflow: hidden;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  padding: var(--padding-41xl) var(--padding-71xl);
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-image: url(/public/section@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  z-index: 1;
+}
+
+@media (max-width: 960px) {
+  .section17 {
+    height: 20.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section17 {
+    height: 6.5rem;
+    display: none;
+  }
 }

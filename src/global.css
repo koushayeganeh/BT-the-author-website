@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
 body {
   margin: 0;
   line-height: normal;
@@ -7,7 +10,9 @@ body {
 :root {
   /* fonts */
   --title-medium: Roboto;
-  --body-large: "Noto Serif";
+  font-family: "Oswald", sans-serif;
+  --font-sans-serif: "Oswald", sans-serif;
+  --font-serif: "Lora", serif;
 
   /* font sizes */
   --lable-large-size: 1.13rem;
@@ -20,6 +25,33 @@ body {
   --font-size-43xl-5: 3.91rem;
   --font-size-sm: 0.88rem;
   --font-size-21xl: 2.5rem;
+
+  --font-size-heading-large: 38px;
+  --font-size-heading-large-height: 40px;
+  --font-size-title-large: 24px;
+  --font-size-title-large-height: 28px;
+  --font-size-read-large: 18px;
+  --font-size-read-large-height: 24px;
+  --font-size-label-large: 18px;
+  --font-size-label-large-height: 20px;
+
+  --font-size-heading-medium: 36px;
+  --font-size-heading-medium-height: 38px;
+  --font-size-title-medium: 28px;
+  --font-size-title-medium-height: 24px;
+  --font-size-read-medium: 18px;
+  --font-size-read-medium-height: 24px;
+  --font-size-label-medium: 18px;
+  --font-size-label-medium-height: 20px;
+
+  --font-size-heading-small: 30px;
+  --font-size-heading-small-height: 32px;
+  --font-size-title-small: 24px;
+  --font-size-title-small-height: 22px;
+  --font-size-read-small: 16px;
+  --font-size-read-small-height: 18px;
+  --font-size-label-small: 18px;
+  --font-size-label-small-height: 20px;
 
   /* Colors */
   --white: #fff;

@@ -3,7 +3,7 @@ const FooterContainer = () => {
   return (
     <section className="section23" id="footer">
       <div className="container12">
-        <div className="title51">© 2023 Author XYZ. All rights reserved.</div>
+        <div className="title51">© 2024 Barış Tayfün. All rights reserved.</div>
       </div>
     </section>
   );

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { MdArrowBackIos } from "react-icons/md";
+import { MdArrowForwardIos } from "react-icons/md";
 import "./QuoteCardForm.css";
 
 const quotesData = [
@@ -79,13 +81,13 @@ const QuoteCardForm = () => {
     <section className="section20" id="quotes-section">
       <div className="container10">
         <h1 className="title44" id="quotes-heading">
-          Quotes
+          Alıntılar
         </h1>
         <div className="list7">
           <div className="card1">
             <div className="button-container">
               <button className="nav-button" onClick={prevQuote}>
-                Previous
+                <MdArrowBackIos />
               </button>
             </div>
             <div className="card-content-row">
@@ -114,7 +116,7 @@ const QuoteCardForm = () => {
             </div>
             <div className="button-container">
               <button className="nav-button" onClick={nextQuote}>
-                Next
+                <MdArrowForwardIos />
               </button>
             </div>
           </div>

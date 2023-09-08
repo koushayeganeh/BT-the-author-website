@@ -9,7 +9,8 @@
   align-self: stretch;
   flex: 1;
   position: relative;
-  line-height: 1.75rem;
+  font-family: var(--font-sans-serif);
+  font-size: var(--font-size-read-small);
 }
 .container12,
 .section23 {

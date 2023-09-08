@@ -52,7 +52,7 @@ const HomeHifiDesktop = () => {
       <UpcomingBooksContainer />
       <QuoteCardForm />
       <ContactAuthorFormContainer />
-      <SocialLinksContainer />
+      {/* <SocialLinksContainer /> */}
       <FooterContainer />
     </div>
   );

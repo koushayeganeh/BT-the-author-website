@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./HeroSection.css";
 
 const HeroSection = () => {
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
@@ -182,28 +183,26 @@ const HeroSection = () => {
       style={{
         position: "relative",
         width: "100%",
-        height: "1080px",
+        height: "100%",
         backgroundColor: "black",
+        overflow: "hidden",
       }}
     >
-      <section
-        className="hero"
-        id="heroSection"
+      <div
+        className="overlay-color"
         style={{
-          position: "relative",
-          width: "120%",
-          height: "1080px",
-          backgroundColor: "#44adff",
-          display: "flex",
-          flexWrap: "wrap",
-          alignContent: "flex-start",
-          color: "white",
-          fontFamily: "Arial, sans-serif",
-          fontSize: "4rem",
-          margin: "-100px",
+          position: "absolute",
+          top: "0",
+          right: "0",
+          width: "100%",
+          height: "100%",
+          opacity: "0.4",
+          zIndex: "1",
           overflow: "hidden",
+          pointerEvents: "none",
         }}
-      >
+      ></div>
+      <section className="hero" id="heroSection">
         {words.map((word, index) => (
           <span
             className={`word ${
@@ -214,8 +213,8 @@ const HeroSection = () => {
             onMouseLeave={handleWordMouseOut}
             style={{
               transition: "opacity 0.3s ease",
-              marginRight: "2rem",
-              marginBottom: "10px",
+              // marginRight: "2rem",
+              marginBottom: "-50px",
               cursor: "pointer",
               opacity: word.category === activeCategoryIndex ? "1" : "0.3",
             }}
@@ -224,19 +223,8 @@ const HeroSection = () => {
           </span>
         ))}
       </section>
-      <div
-        className="overlay"
-        style={{
-          position: "absolute",
-          top: "0",
-          right: "0",
-          width: "40%",
-          height: "100%",
-          opacity: "0.8",
-          zIndex: "2",
-          overflow: "hidden",
-        }}
-      >
+
+      <div className="overlay">
         <div
           className="image-container"
           id="categoryImage"
@@ -248,6 +236,7 @@ const HeroSection = () => {
             style={{
               maxWidth: "none",
               maxHeight: "100%",
+              width: "100%",
               objectFit: "contain",
             }}
           />
