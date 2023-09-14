@@ -2,6 +2,7 @@
   0% {
     color: var(--white);
   }
+
   to {
     color: var(--secondary);
   }
@@ -11,6 +12,7 @@
   0% {
     color: var(--secondary);
   }
+
   to {
     color: var(--white);
   }
@@ -27,11 +29,13 @@
   display: inline-block;
   width: 32.5rem;
 }
+
 .avatar-icon,
 .title45 {
   position: relative;
   /* overflow: hidden; */
 }
+
 .avatar-icon {
   border-radius: var(--br-13xl);
   width: 3rem;
@@ -39,6 +43,7 @@
   flex-shrink: 0;
   object-fit: cover;
 }
+
 .title45 {
   flex: 1;
   line-height: 1.75rem;
@@ -47,12 +52,14 @@
   white-space: nowrap;
   height: 1.25rem;
 }
+
 .avatar-parent {
   align-self: stretch;
   flex-direction: row;
   align-items: center;
   gap: var(--gap-5xs);
 }
+
 .avatar,
 .avatar-inner,
 .avatar-parent,
@@ -60,29 +67,35 @@
   display: flex;
   justify-content: flex-start;
 }
+
 .avatar-inner {
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .avatar,
 .user {
   flex-direction: row;
   align-items: center;
 }
+
 .avatar {
   flex: 1;
 }
+
 .user {
   align-self: stretch;
   display: none;
 }
+
 .atticus-he-was {
   margin: 0;
   font-size: var(--font-size-read-large);
   line-height: var(--font-size-read-large-height);
   font-family: var(--font-serif);
 }
+
 .title46 {
   align-self: stretch;
   position: relative;
@@ -117,6 +130,7 @@
   justify-content: center;
   gap: var(--gap-base);
 }
+
 .card1,
 .container10,
 .list7 {
@@ -124,12 +138,14 @@
   flex-direction: row;
   align-items: center;
 }
+
 .card-content-row {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
 }
+
 .list7 {
   align-self: stretch;
   flex-direction: row;
@@ -139,6 +155,7 @@
   font-size: var(--title-large-size);
   color: var(--grey);
 }
+
 .container10 {
   flex: 1;
   flex-direction: column;
@@ -148,6 +165,7 @@
   width: 100%;
   max-width: var(--max-inner-width);
 }
+
 .section-child10 {
   position: absolute;
   margin: 0 !important;
@@ -160,6 +178,7 @@
   height: 0.03rem;
   z-index: 1;
 }
+
 .section20 {
   align-self: stretch;
   overflow: hidden;
@@ -177,7 +196,7 @@
   font-family: var(--title-medium);
 }
 
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   .section20 {
     padding: var(--padding-13xl) var(--padding-13xl);
   }
@@ -205,4 +224,4 @@
     font-size: var(--font-size-heading-small);
     line-height: var(--font-size-heading-small-height);
   }
-}
+} */

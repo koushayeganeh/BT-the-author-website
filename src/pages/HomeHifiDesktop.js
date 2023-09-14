@@ -7,7 +7,6 @@ import UpcomingEventCard from "../components/UpcomingEventCard";
 import UpcomingBooksContainer from "../components/UpcomingBooksContainer";
 import QuoteCardForm from "../components/QuoteCardForm";
 import ContactAuthorFormContainer from "../components/ContactAuthorFormContainer";
-import SocialLinksContainer from "../components/SocialLinksContainer";
 import FooterContainer from "../components/FooterContainer";
 import "./HomeHifiDesktop.css";
 const HomeHifiDesktop = () => {
@@ -52,7 +51,6 @@ const HomeHifiDesktop = () => {
       <UpcomingBooksContainer />
       <QuoteCardForm />
       <ContactAuthorFormContainer />
-      {/* <SocialLinksContainer /> */}
       <FooterContainer />
     </div>
   );
