@@ -18,8 +18,8 @@ const ArticleCard = ({
   return (
     <div className="row7">
       <div className="article16" onClick={onArticleContainer3Click}>
-        <div className="image-container16" style={imageContainerStyle}>
-          <div className="image14" />
+        <div className="image-container16">
+          <div className="image14" style={imageContainerStyle} />
         </div>
         <div className="title-parent14">
           <h2 className="title57">{title}</h2>

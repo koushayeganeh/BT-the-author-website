@@ -196,7 +196,7 @@
   font-family: var(--title-medium);
 }
 
-/* @media (max-width: 960px) {
+@media (max-width: 960px) {
   .section20 {
     padding: var(--padding-13xl) var(--padding-13xl);
   }
@@ -224,4 +224,4 @@
     font-size: var(--font-size-heading-small);
     line-height: var(--font-size-heading-small-height);
   }
-} */
+}

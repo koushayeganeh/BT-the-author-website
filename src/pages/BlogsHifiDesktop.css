@@ -56,6 +56,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  grid-row-gap: 0;
 }
 
 .blogs-main-container {
@@ -63,7 +64,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: var(--padding-13xl) var(--padding-71xl);
+  padding: var(--padding-71xl) var(--padding-71xl);
   align-items: center;
   justify-content: center;
   position: relative;
@@ -73,15 +74,44 @@
   font-size: var(--heading-large-size);
   color: var(--secondary);
   font-family: var(--title-medium);
-
 }
 
 .blogs-hifi-desktop {
   position: relative;
-  background-color: var(--grey);
-  width: 100%;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: var(--padding-61xl) 0 0;
+  justify-content: flex-start;
+}
+
+@media (max-width: 960px) {
+  .blogs-main-container {
+    padding: var(--padding-13xl) var(--padding-13xl);
+  }
+
+  .blogs-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    grid-row-gap: 0;
+  }
+
+  .title22 {
+    font-size: var(--font-size-heading-medium);
+    line-height: var(--font-size-heading-medium-height);
+  }
+}
+
+@media (max-width: 768px) {
+  .blogs-main-container {
+    padding: var(--padding-xl) var(--padding-5xs);
+  }
+
+  .blogs-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0rem;
+  }
+
+  .title22 {
+    font-size: var(--font-size-heading-small);
+    line-height: var(--font-size-heading-small-height);
+  }
 }

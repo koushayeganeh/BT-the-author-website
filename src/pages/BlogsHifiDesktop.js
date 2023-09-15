@@ -7,6 +7,8 @@ import "./BlogsHifiDesktop.css";
 const BlogsHifiDesktop = () => {
   const navigate = useNavigate();
 
+  // TOPBAR NAVIGATION LINKS
+
   const onTabText0Click = useCallback(() => {
     navigate("/");
   }, [navigate]);
@@ -26,6 +28,8 @@ const BlogsHifiDesktop = () => {
   const onTabText4Click = useCallback(() => {
     navigate("/contact");
   }, [navigate]);
+
+  // BLOGS NAVIGATION LINKS
 
   const onArticleContainer3Click = useCallback(() => {
     navigate("/single-blog");
@@ -51,6 +55,28 @@ const BlogsHifiDesktop = () => {
       <div className="blogs-main-container">
         <section className="frame-section">
           <h1 className="title22">Featured Articles</h1>
+          <div className="blogs-container">
+            <ArticleCard
+              title="featured blog number 1"
+              date="Aug 20, 2023"
+              labelText="Tarih"
+              labelText1="Dram"
+              labelText2="Sosyal"
+              labelText3="Politik"
+              propBackgroundImage="url('/image-213@2x.png')"
+              onArticleContainer3Click={onArticleContainer3Click}
+            />
+            <ArticleCard
+              title="featured blog number 2"
+              date="Aug 20, 2023"
+              labelText="Tarih"
+              labelText1="Dram"
+              labelText2="Sosyal"
+              labelText3="Politik"
+              propBackgroundImage="url('/image-213@2x.png')"
+              onArticleContainer3Click={onArticleContainer3Click}
+            />
+          </div>
         </section>
         <section className="frame-section">
           <h1 className="title22">Recent Articles</h1>
@@ -62,7 +88,7 @@ const BlogsHifiDesktop = () => {
               labelText1="Dram"
               labelText2="Sosyal"
               labelText3="Politik"
-              propBackgroundImage="url('/image-container3@3x.png')"
+              propBackgroundImage="url('/image-213@2x.png')"
               onArticleContainer3Click={onArticleContainer3Click}
             />
             <ArticleCard
@@ -72,7 +98,7 @@ const BlogsHifiDesktop = () => {
               labelText1="Dram"
               labelText2="Sosyal"
               labelText3="Politik"
-              propBackgroundImage="url('/image-container3@3x.png')"
+              propBackgroundImage="url('/image-213@2x.png')"
               onArticleContainer3Click={onArticleContainer3Click}
             />
             <ArticleCard
@@ -82,7 +108,27 @@ const BlogsHifiDesktop = () => {
               labelText1="Dram"
               labelText2="Sosyal"
               labelText3="Politik"
-              propBackgroundImage="url('/image-container3@3x.png')"
+              propBackgroundImage="url('/image-213@2x.png')"
+              onArticleContainer3Click={onArticleContainer3Click}
+            />
+            <ArticleCard
+              title="blog number 4"
+              date="Aug 20, 2023"
+              labelText="Tarih"
+              labelText1="Dram"
+              labelText2="Sosyal"
+              labelText3="Politik"
+              propBackgroundImage="url('/image-213@2x.png')"
+              onArticleContainer3Click={onArticleContainer3Click}
+            />
+            <ArticleCard
+              title="blog number 5"
+              date="Aug 20, 2023"
+              labelText="Tarih"
+              labelText1="Dram"
+              labelText2="Sosyal"
+              labelText3="Politik"
+              propBackgroundImage="url('/image-213@2x.png')"
               onArticleContainer3Click={onArticleContainer3Click}
             />
           </div>

@@ -43,7 +43,6 @@ const AuthorHifiDesktop = () => {
           id="author-hero-img"
           src="/image-container@2x.png"
         />
-        <img className="section-child" alt="" src="/vector-200.svg" />
       </section>
       <TextBox
         title="Biyografi"

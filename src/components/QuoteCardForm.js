@@ -122,7 +122,6 @@ const QuoteCardForm = () => {
           </div>
         </div>
       </div>
-      <img className="section-child10" alt="" src="/vector-200.svg" />
     </section>
   );
 };
