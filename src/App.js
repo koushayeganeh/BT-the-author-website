@@ -9,8 +9,10 @@ import AuthorHifiDesktop from "./pages/AuthorHifiDesktop";
 import SingleBookBUYHifiDes from "./pages/SingleBookBUYHifiDes";
 import ContactHifiDesktop from "./pages/ContactHifiDesktop";
 import SingleBlogHifiDesktop from "./pages/SingleBlogHifiDesktop";
+import SingleBlogPage from "./pages/SingleBlogPage";
 import BlogsHifiDesktop from "./pages/BlogsHifiDesktop";
 import SingleBookHifiDesktop from "./pages/SingleBookHifiDesktop";
+import SingleBookPage from "./pages/SingleBookPage";
 import LibraryHifiDesktop from "./pages/LibraryHifiDesktop";
 import { useEffect } from "react";
 
@@ -85,8 +87,10 @@ function App() {
       <Route path="/single-book-buy" element={<SingleBookBUYHifiDes />} />
       <Route path="/contact" element={<ContactHifiDesktop />} />
       <Route path="/single-blog" element={<SingleBlogHifiDesktop />} />
+      <Route path="/blogs/:blogID" element={<SingleBlogPage />} />
       <Route path="/blogs" element={<BlogsHifiDesktop />} />
       <Route path="/single-book" element={<SingleBookHifiDesktop />} />
+      <Route path="/library/:bookID" element={<SingleBookPage />} />
       <Route path="/library" element={<LibraryHifiDesktop />} />
     </Routes>
   );

@@ -258,81 +258,39 @@ const SingleBlogHifiDesktop = () => {
       <section className="title-group">
         <h1 className="title16">Suggested Articles</h1>
         <div className="row1">
-          <div className="article5" onClick={onArticleContainer3Click}>
-            <div className="image-container2">
-              <div className="image1">
-                <img className="image-21-icon" alt="" src="/image-21@2x.png" />
-              </div>
-            </div>
-            <div className="title-parent1">
-              <h2 className="title17">Article 1</h2>
-              <div className="subtitle8">Aug 20, 2023</div>
-              <div className="selection">
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="article5" onClick={onArticleContainer4Click}>
-            <div className="image-container2">
-              <div className="image1">
-                <img className="image-21-icon" alt="" src="/image-211@2x.png" />
-              </div>
-            </div>
-            <div className="title-parent1">
-              <h2 className="title17">Article 1</h2>
-              <div className="subtitle8">Aug 20, 2023</div>
-              <div className="selection">
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="article5" onClick={onArticleContainer5Click}>
-            <div className="image-container2">
-              <div className="image1">
-                <img className="image-21-icon" alt="" src="/image-212@2x.png" />
-              </div>
-            </div>
-            <div className="title-parent1">
-              <h2 className="title17">Article 1</h2>
-              <div className="subtitle8">Aug 20, 2023</div>
-              <div className="selection">
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-                <div className="label-normal">
-                  <div className="label-text">Mystery</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ArticleCard
+            blogID="1"
+            title="featured blog number 1"
+            date="Aug 20, 2023"
+            labelText="Tarih"
+            labelText1="Dram"
+            labelText2="Sosyal"
+            labelText3="Politik"
+            propBackgroundImage="url('/image-213@2x.png')"
+            onArticleContainer3Click={() => onArticleContainer3Click(1)}
+          />
+          <ArticleCard
+            blogID="1"
+            title="featured blog number 1"
+            date="Aug 20, 2023"
+            labelText="Tarih"
+            labelText1="Dram"
+            labelText2="Sosyal"
+            labelText3="Politik"
+            propBackgroundImage="url('/image-213@2x.png')"
+            onArticleContainer3Click={() => onArticleContainer3Click(1)}
+          />
+          <ArticleCard
+            blogID="1"
+            title="featured blog number 1"
+            date="Aug 20, 2023"
+            labelText="Tarih"
+            labelText1="Dram"
+            labelText2="Sosyal"
+            labelText3="Politik"
+            propBackgroundImage="url('/image-213@2x.png')"
+            onArticleContainer3Click={() => onArticleContainer3Click(1)}
+          />
         </div>
       </section>
       <ContainerButtonSection

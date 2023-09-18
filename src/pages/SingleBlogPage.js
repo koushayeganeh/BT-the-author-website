@@ -1,10 +1,14 @@
-import { useCallback } from "react";
+import React from "react";
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
 import TopBar from "../components/TopBar";
-import ArticleCard from "../components/ArticleCard";
 import FooterContainer from "../components/FooterContainer";
-import "./BlogsHifiDesktop.css";
-const BlogsHifiDesktop = () => {
+import ArticleCard from "../components/ArticleCard";
+import blogData from "./blogData.js";
+import "./SingleBlogPage.css";
+
+const SingleBlogPage = () => {
   const navigate = useNavigate();
 
   // TOPBAR NAVIGATION LINKS
@@ -29,8 +33,6 @@ const BlogsHifiDesktop = () => {
     navigate("/contact");
   }, [navigate]);
 
-  // BLOGS NAVIGATION LINKS
-
   const onArticleContainer3Click = useCallback(
     (blogID) => {
       navigate(`/blogs/${blogID}`);
@@ -38,8 +40,17 @@ const BlogsHifiDesktop = () => {
     [navigate]
   );
 
+  const { blogID } = useParams();
+
+  // Find the blog object with a matching ID
+  const blog = blogData.find((item) => item.id === parseInt(blogID));
+
+  if (!blog) {
+    return <div>Blog not found.</div>;
+  }
+
   return (
-    <div className="blogs-hifi-desktop">
+    <div className="single-blog">
       <TopBar
         onTabText0Click={onTabText0Click}
         onTabText1Click={onTabText1Click}
@@ -47,21 +58,28 @@ const BlogsHifiDesktop = () => {
         onTabText3Click={onTabText3Click}
         onTabText4Click={onTabText4Click}
       />
-      <section className="section10" id="page-hero-section">
+      <section className="section8" id="page-hero-section">
         <img
-          className="image-container-icon4"
+          className="image-container-icon3"
           alt=""
           id="page-hero-img"
           src="/image-container@2x.png"
         />
       </section>
+      <section className="list4" id="bio-section">
+        <div className="article13">
+          <div className="frame-parent">
+            <div className="title-parent10">{blog.contentJSX}</div>
+          </div>
+        </div>
+      </section>
       <div className="blogs-main-container">
         <section className="frame-section">
-          <h1 className="title22">Featured Articles</h1>
+          <h1 className="title22">Other Suggested Blogs</h1>
           <div className="blogs-container">
             <ArticleCard
               blogID="1"
-              title="Fiziksel Varlığın Temel Rolü"
+              title="featured blog number 1"
               date="Aug 20, 2023"
               labelText="Tarih"
               labelText1="Dram"
@@ -71,7 +89,6 @@ const BlogsHifiDesktop = () => {
               onArticleContainer3Click={() => onArticleContainer3Click(1)}
             />
             <ArticleCard
-              blogID="2"
               title="featured blog number 2"
               date="Aug 20, 2023"
               labelText="Tarih"
@@ -79,55 +96,10 @@ const BlogsHifiDesktop = () => {
               labelText2="Sosyal"
               labelText3="Politik"
               propBackgroundImage="url('/image-213@2x.png')"
-              onArticleContainer3Click={() => onArticleContainer3Click(2)}
-            />
-          </div>
-        </section>
-        <section className="frame-section">
-          <h1 className="title22">Recent Articles</h1>
-          <div className="blogs-container">
-            <ArticleCard
-              title="blog number 1"
-              date="Aug 20, 2023"
-              labelText="Tarih"
-              labelText1="Dram"
-              labelText2="Sosyal"
-              labelText3="Politik"
-              propBackgroundImage="url('/image-213@2x.png')"
               onArticleContainer3Click={onArticleContainer3Click}
             />
             <ArticleCard
-              title="blog number 2"
-              date="Aug 20, 2023"
-              labelText="Tarih"
-              labelText1="Dram"
-              labelText2="Sosyal"
-              labelText3="Politik"
-              propBackgroundImage="url('/image-213@2x.png')"
-              onArticleContainer3Click={onArticleContainer3Click}
-            />
-            <ArticleCard
-              title="blog number 3"
-              date="Aug 20, 2023"
-              labelText="Tarih"
-              labelText1="Dram"
-              labelText2="Sosyal"
-              labelText3="Politik"
-              propBackgroundImage="url('/image-213@2x.png')"
-              onArticleContainer3Click={onArticleContainer3Click}
-            />
-            <ArticleCard
-              title="blog number 4"
-              date="Aug 20, 2023"
-              labelText="Tarih"
-              labelText1="Dram"
-              labelText2="Sosyal"
-              labelText3="Politik"
-              propBackgroundImage="url('/image-213@2x.png')"
-              onArticleContainer3Click={onArticleContainer3Click}
-            />
-            <ArticleCard
-              title="blog number 5"
+              title="featured blog number 2"
               date="Aug 20, 2023"
               labelText="Tarih"
               labelText1="Dram"
@@ -139,10 +111,9 @@ const BlogsHifiDesktop = () => {
           </div>
         </section>
       </div>
-
       <FooterContainer />
     </div>
   );
 };
 
-export default BlogsHifiDesktop;
+export default SingleBlogPage;
