@@ -1,7 +1,8 @@
 .hero {
   position: relative;
   width: 140%;
-  background-color: #44adff;
+  /* background-color: #44adff; */
+  background-color: #071a28;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;

@@ -7,6 +7,7 @@ body {
   margin: 0;
   line-height: normal;
 }
+
 :root {
   /* fonts */
   --title-medium: Roboto;
@@ -55,8 +56,10 @@ body {
 
   /* Colors */
   --white: #fff;
-  --secondary: #151957;
-  --primary: #44adff;
+  /* --secondary: #151957; */
+  --secondary: #09001c;
+  /* --primary: #44adff; */
+  --primary: #214f83;
   --grey: #f0f4f7;
   --color-gray-200: rgba(0, 0, 0, 0.5);
   --color-gray-300: rgba(0, 0, 0, 0.1);
