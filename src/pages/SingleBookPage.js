@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
 import TopBar from "../components/TopBar";
+import ShoppingCard from "../components/ShoppingCard";
 import FooterContainer from "../components/FooterContainer";
 import bookData from "./bookData.js";
 import "./SingleBookPage.css";
@@ -48,9 +49,23 @@ const SingleBookPage = () => {
     return <div>Book not found.</div>;
   }
 
-  const onPrimaryClick = useCallback(() => {
-    navigate("/single-book-buy");
-  }, [navigate]);
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+
+  const showOverlay = () => {
+    setIsOverlayVisible(true);
+  };
+
+  const hideOverlay = () => {
+    setIsOverlayVisible(false);
+  };
+
+  // const onPrimaryClick = useCallback(() => {
+  //   navigate(`/library/${bookID}`);
+  // }, [navigate]);
+
+  // const onRectangleClick = useCallback(() => {
+  //   navigate("/single-book");
+  // }, [navigate]);
 
   return (
     <div className="single-book">
@@ -76,69 +91,25 @@ const SingleBookPage = () => {
               <img className="image-icon1" alt="" src={book.img} />
             </div>
             <button className="button1">
-              <button className="primary1" onClick={onPrimaryClick}>
-                <div className="title29">BUY THIS BOOK</div>
+              <button className="primary1" onClick={showOverlay}>
+                <div className="title29">BU KİTABI SATIN AL</div>
               </button>
             </button>
           </div>
           <div className="title-parent8">
             <div className="title30">{book.title}</div>
             <div className="subtitle14">{book.subtitle}</div>
-            <div className="subtitle15">
-              <p className="at-vero-eos22">
-                "At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas molestias excepturi sint occaecati cupiditate
-                non provident, similique sunt in culpa qui officia deserunt
-                mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                rerum facilis est et expedita distinctio. Nam libero tempore,
-                cum soluta nobis est eligendi optio cumque nihil impedit quo
-                minus id quod maxime placeat facere possimus, omnis voluptas
-                assumenda est, omnis dolor repellendus. Temporibus autem
-                quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                eveniet ut et voluptates repudiandae sint et molestiae non
-                recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
-                ut aut reiciendis voluptatibus maiores alias consequatur aut
-                perferendis doloribus asperiores repellat."
-              </p>
-              <p className="at-vero-eos22">&nbsp;</p>
-              <p className="at-vero-eos22">
-                "At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas molestias excepturi sint occaecati cupiditate
-                non provident, similique sunt in culpa qui officia deserunt
-                mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                rerum facilis est et expedita distinctio. Nam libero tempore,
-                cum soluta nobis est eligendi optio cumque nihil impedit quo
-                minus id quod maxime placeat facere possimus, omnis voluptas
-                assumenda est, omnis dolor repellendus. Temporibus autem
-                quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                eveniet ut et voluptates repudiandae sint et molestiae non
-                recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
-                ut aut reiciendis voluptatibus maiores alias consequatur aut
-                perferendis doloribus asperiores repellat."
-              </p>
-              <p className="at-vero-eos22">&nbsp;</p>
-              <p className="at-vero-eos22">
-                "At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas molestias excepturi sint occaecati cupiditate
-                non provident, similique sunt in culpa qui officia deserunt
-                mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                rerum facilis est et expedita distinctio. Nam libero tempore,
-                cum soluta nobis est eligendi optio cumque nihil impedit quo
-                minus id quod maxime placeat facere possimus, omnis voluptas
-                assumenda est, omnis dolor repellendus. Temporibus autem
-                quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                eveniet ut et voluptates repudiandae sint et molestiae non
-                recusandae. Itaque earum rerum hic tenetur a sapiente delectus,
-                ut aut reiciendis voluptatibus maiores alias consequatur aut
-                perferendis doloribus asperiores repellat."
-              </p>
-            </div>
+            {book.contentJSX}
           </div>
         </div>
       </section>
+      {isOverlayVisible && (
+        <>
+          <div className="single-book-buy-overlay" onClick={hideOverlay} />
+          <ShoppingCard />
+        </>
+      )}
+
       <FooterContainer />
     </div>
   );

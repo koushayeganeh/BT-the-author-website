@@ -1,78 +1,48 @@
 // blogData.js
-const blogData = [
+const bookData = [
   {
     id: 1,
     title: "Sessiz Tanıkların Gözüyle",
     subtitle: "Bir Romanın Anlatımıyla 20. Yüzyılın Karanlık Sayfaları",
     img: "/image@2x.png",
-  },
-  {
-    id: 2,
-    title: "Edebiyat Temelli Kültürler",
+    amazon:
+      "https://www.amazon.de/-/en/Direct-Tactical-Backpack-Adaptive-Einheitsgr%C3%B6%C3%9Fe/dp/B07QHVYLTT/ref=sr_1_1?keywords=direct%2Baction%2Bdragon%2Begg%2Bmk2&qid=1690985199&sprefix=direct%2Baction%2Bdra%2Caps%2C167&sr=8-1&th=1",
+    ebay: "https://www.amazon.de/-/en/Direct-Tactical-Backpack-Adaptive-Einheitsgr%C3%B6%C3%9Fe/dp/B07QHVYLTT/ref=sr_1_1?keywords=direct%2Baction%2Bdragon%2Begg%2Bmk2&qid=1690985199&sprefix=direct%2Baction%2Bdra%2Caps%2C167&sr=8-1&th=1",
+    aliexpress:
+      "https://www.amazon.de/-/en/Direct-Tactical-Backpack-Adaptive-Einheitsgr%C3%B6%C3%9Fe/dp/B07QHVYLTT/ref=sr_1_1?keywords=direct%2Baction%2Bdragon%2Begg%2Bmk2&qid=1690985199&sprefix=direct%2Baction%2Bdra%2Caps%2C167&sr=8-1&th=1",
+    bookshop:
+      "https://www.amazon.de/-/en/Direct-Tactical-Backpack-Adaptive-Einheitsgr%C3%B6%C3%9Fe/dp/B07QHVYLTT/ref=sr_1_1?keywords=direct%2Baction%2Bdragon%2Begg%2Bmk2&qid=1690985199&sprefix=direct%2Baction%2Bdra%2Caps%2C167&sr=8-1&th=1",
     contentJSX: (
       <>
-        <div className="blog-container">
-          <h1>Edebiyat Temelli Kültürler</h1>
-
-          <h2 className="title37">Kelimelerin Gücü</h2>
-
-          <p className="subtitle18">
-            Edebiyat, insan kültürünün temel taşlarından biridir. Kelimelerin
-            gücü, toplumların tarihini şekillendirir ve farklı kültürlerin
-            kimliklerini yaratır. Edebiyat temelli kültürler, eserlerindeki
-            hikayeler ve şiirler aracılığıyla kendilerini ifade ederler ve bu
-            yolla geçmişlerini ve geleceklerini aktarırlar.
+        <div className="subtitle15">
+          <p>
+            İnsanlık tarihi boyunca, fiziksel varlığımızın ruhani yolculuğumuz
+            üzerinde derin etkileri olduğunu gözlemlemek mümkündür. Bedenimiz,
+            ruhumuzun deneyimlerini şekillendirir ve bu etki, kişinin içsel
+            yolculuğunu derinlemesine etkiler.
           </p>
-
-          <p className="subtitle18">
-            Edebiyatın evrenselliği, farklı dillerde yazılan eserler
-            aracılığıyla dünya çapında insanları bir araya getirir. Bu eserler,
-            kültürel sınırları aşar ve insanların ortak duygularını ve
-            deneyimlerini paylaşmalarını sağlar. Edebiyat, insanların
-            farklılıklarını kutlayan ve bir arada yaşama yeteneğini teşvik eden
-            bir araçtır.
-          </p>
-
-          <h2 className="title37">Kültürler Arası Köprü</h2>
-
-          <p className="subtitle18">
-            Edebiyat, kültürler arası bir köprü oluşturur. Bir kültürden
-            diğerine geçiş yaparken, edebiyatın eserleri insanlara yeni bakış
-            açıları sunar. Bu, insanların farklı düşünce tarzlarını anlamalarına
-            ve takdir etmelerine yardımcı olabilir. Edebiyat, insanların dünya
-            görüşlerini genişletir ve daha empatik bireyler olmalarını teşvik
-            eder.
-          </p>
-
-          <p className="subtitle18">
-            Edebiyat temelli kültürler, öyküler ve karakterler aracılığıyla
-            değerleri, inançları ve tarihleri aktarır. Bu kültürler, kelimelerin
-            gücüyle insanları etkiler ve değiştirir. Edebiyatın derinlikleri,
-            kültürler arası iletişimi artırır ve insanları bir araya getirir.
-          </p>
-
-          <h2 className="title37">Edebiyatın Geleceği</h2>
-
-          <p className="subtitle18">
-            Edebiyatın gücü, dijital çağda bile önemini korur. İnternet, dünya
-            çapında insanların edebiyat eserlerini paylaşmasını ve erişmesini
-            kolaylaştırır. Edebiyat temelli kültürler, çevrimiçi platformlarda
-            yeni okuyucular ve yazarlar bulur. Bu, edebiyatın gelecekte de
-            kültürler arası iletişimi ve anlayışı teşvik edeceği anlamına gelir.
-          </p>
-
-          <p className="subtitle18">
-            Edebiyat, kültürlerin birbirini daha iyi anlaması ve dünya barışını
-            teşvik etmesi için önemli bir araç olabilir. Kelimelerin gücü,
-            insanları birleştirir ve farklılıkları kutlar. Edebiyatın evrensel
-            dilinde, kültürler arası bir anlayış ve işbirliği dünyamızı daha iyi
-            bir yer haline getirebilir.
+          <p>
+            Beden, fiziksel dünya ile etkileşimimizin temel taşıdır. Bu
+            etkileşim, duyu organlarımız aracılığıyla gerçekleşir ve zihinsel ve
+            duygusal deneyimlerimizi oluşturan temel veriyi sunar. Beden,
+            insanın çevresini keşfetmesine, deneyimlemesine ve öğrenmesine
+            yardımcı olur. Fiziksel varlığımız, dokunma, tad alma, işitme ve
+            görme gibi duyusal deneyimlerimizi mümkün kılar.
           </p>
         </div>
       </>
     ),
   },
-  // Add more blog objects...
+  {
+    id: 2,
+    title: "Günışığı Gözyaşları",
+    subtitle: "Bir Kadının İç Dünyasına Yolculuk",
+    img: "/image@2x.png",
+    amazon: "https://www.amazon.de",
+    ebay: "https://www.amazon.de",
+    aliexpress: "https://www.amazon.de",
+    bookshop: "https://www.amazon.de",
+  },
 ];
 
-export default blogData;
+export default bookData;

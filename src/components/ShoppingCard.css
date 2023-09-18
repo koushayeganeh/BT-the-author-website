@@ -71,7 +71,7 @@
 .section24 {
   top: 37.69rem;
   background-color: var(--grey);
-  width: 90rem;
+  width: 100%;
   height: 33.31rem;
   flex-shrink: 0;
   display: flex;
@@ -86,4 +86,45 @@
   font-size: var(--lable-large-size);
   color: var(--color-black);
   font-family: var(--title-medium);
+  opacity: 1;
+}
+
+@media (max-width: 960px) {
+  .image13 {
+    padding: var(--padding-13xl) 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .image-27-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-xs);
+  }
+
+  .image-29-icon {
+    position: relative;
+    width: 4.25rem;
+    height: 4.25rem;
+    object-fit: cover;
+  }
+
+  .frame-group {
+    gap: var(--gap-5xl);
+  }
+
+  .image13 {
+    padding: 1rem;
+  }
+
+  .image-container15 {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .section24 {
+    padding: 0;
+    background-color: transparent;
+  }
 }
