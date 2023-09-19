@@ -10,6 +10,8 @@
     "@types/node": "^16.11.14",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "canvas-sketch": "^0.7.7",
+    "canvas-sketch-cli": "^1.11.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",

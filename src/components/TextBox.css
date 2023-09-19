@@ -55,7 +55,7 @@
 .textbox-list4 {
   background-color: var(--grey);
   flex-direction: column;
-  padding: var(--padding-13xl) var(--padding-71xl);
+  padding: var(--padding-base) var(--padding-71xl);
   align-items: center;
   justify-content: center;
   z-index: 2;
@@ -67,7 +67,7 @@
 
 @media (max-width: 960px) {
   .textbox-list4 {
-    padding: var(--padding-13xl) var(--padding-13xl);
+    padding: var(--padding-base) var(--padding-13xl);
   }
 
   .textbox-subtitle18 {
@@ -84,7 +84,6 @@
 
 @media (max-width: 768px) {
   .textbox-list4 {
-    /* padding: var(--padding-45xl) var(--padding-71xl); */
     padding: 0 var(--padding-5xs);
     padding-bottom: var(--padding-13xl);
   }

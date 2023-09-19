@@ -118,10 +118,18 @@
   align-items: flex-start;
   justify-content: center;
   gap: var(--gap-base);
+  background-color: var(--white);
 }
+
+.article14:hover {
+  animation: 0.2s ease-in-out 0s 1 forwards change-background-color;
+}
+.article14:not(:hover) {
+  animation: 0.2s ease-in-out 0s 1 forwards change-background-color-out;
+}
+
 .row5 {
   align-self: stretch;
-  background-color: var(--white);
   align-items: center;
   justify-content: flex-start;
   cursor: pointer;
@@ -129,12 +137,6 @@
   font-size: var(--title-large-size);
   color: var(--color-black);
   font-family: var(--title-medium);
-}
-.row5:hover {
-  animation: 0.2s ease-in-out 0s 1 forwards change-background-color;
-}
-.row5:not(:hover) {
-  animation: 0.2s ease-in-out 0s 1 forwards change-background-color-out;
 }
 
 @media (max-width: 960px) {

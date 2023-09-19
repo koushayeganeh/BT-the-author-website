@@ -1,0 +1,38 @@
+.interactive-visual-container {
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(
+    100deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(65, 105, 135, 1) 21%,
+    rgba(68, 173, 255, 1) 42%
+  );
+  background: -webkit-linear-gradient(
+    100deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(65, 105, 135, 1) 21%,
+    rgba(68, 173, 255, 1) 42%
+  );
+  background: linear-gradient(
+    100deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(65, 105, 135, 1) 21%,
+    rgba(68, 173, 255, 1) 42%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#44adff", GradientType=1);
+  opacity: 0.8;
+  image-rendering: optimizeSpeed; /* Older versions of Firefox */
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: pixelated; /* Generic CSS */
+  -ms-interpolation-mode: nearest-neighbor; /* IE */
+}
