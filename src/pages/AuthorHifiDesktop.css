@@ -13,15 +13,32 @@
   position: relative;
 }
 .section {
-  background-color: var(--primary);
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  /* padding: var(--padding-41xl) var(--padding-71xl); */
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-41xl);
-  z-index: 0;
+  background-color: black;
+  width: 100%;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(
+    100deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(65, 105, 135, 1) 32%,
+    rgb(62, 139, 197) 72%
+  );
+  background: -webkit-linear-gradient(
+    100deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(65, 105, 135, 1) 32%,
+    rgb(62, 139, 197) 72%
+  );
+  background: linear-gradient(
+    100deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(65, 105, 135, 1) 32%,
+    rgb(62, 139, 197) 72%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#44adff", GradientType=1);
 }
 
 .title1 {

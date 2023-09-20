@@ -1,0 +1,20 @@
+.interactive-visual-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  /* border: 1px solid #ccc; */
+  padding: 0;
+  margin: 0;
+}

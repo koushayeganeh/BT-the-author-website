@@ -4,7 +4,7 @@ import TopBar from "../components/TopBar";
 import TextBox from "../components/TextBox";
 import FooterContainer from "../components/FooterContainer";
 import "./AuthorHifiDesktop.css";
-import InteractiveVisual from "../components/InteractiveVisual";
+import HeaderCanvasAgents from "../components/HeaderCanvasAgents";
 const AuthorHifiDesktop = () => {
   const navigate = useNavigate();
 
@@ -44,7 +44,7 @@ const AuthorHifiDesktop = () => {
           id="author-hero-img"
           src="/image-container@2x.png"
         /> */}
-        <InteractiveVisual />
+        <HeaderCanvasAgents />
       </section>
 
       <section className="section-texts-container">
