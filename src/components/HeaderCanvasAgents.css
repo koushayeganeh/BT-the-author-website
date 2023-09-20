@@ -1,20 +1,26 @@
-.interactive-visual-container {
+.canvas {
+  align-self: center;
+  position: relative;
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: black;
+}
+
+.interactive-visual-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-.canvas {
-  display: block;
+  align-self: stretch;
+  position: relative;
   width: 100%;
   height: 100%;
-  background: transparent;
-  /* border: 1px solid #ccc; */
   padding: 0;
   margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
 }

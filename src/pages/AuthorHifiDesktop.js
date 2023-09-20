@@ -37,13 +37,7 @@ const AuthorHifiDesktop = () => {
         onTabText3Click={onTabText3Click}
         onTabText4Click={onTabText4Click}
       />
-      <section className="section" id="author-hero-section">
-        {/* <img
-          className="image-container-icon"
-          alt=""
-          id="author-hero-img"
-          src="/image-container@2x.png"
-        /> */}
+      <section className="page-header-container">
         <HeaderCanvasAgents />
       </section>
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
+import canvasSketch from "canvas-sketch";
 import "./HeaderCanvasAgents.css";
 
 // Define a GlobalStyle to include Google Fonts
@@ -11,31 +12,49 @@ const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 `;
 
-const CanvasContainer = styled.div`
-  // Other styles for your canvas container
-`;
+// const CanvasContainer = styled.div`
+//   // Other styles for your canvas container
+//   .canvas {
+//     align-self: center;
+//     position: relative;
+//     width: 100%;
+//     height: 250px;
+//     padding: 0;
+//     margin: 0;
+//     overflow: hidden;
+//     box-sizing: border-box;
+//   }
+//   .interactive-visual-container {
+//     align-self: stretch;
+//     position: relative;
+//     width: 100%;
+//     height: 250px;
+//     padding: 0;
+//     margin: 0;
+//     overflow: hidden;
+//     box-sizing: border-box;
+//   }
+// `;
 
 const HeaderCanvasAgents = () => {
   const canvasRef = useRef(null);
-  const canvasSketch = require("canvas-sketch");
   const [canvasDimensions, setCanvasDimensions] = useState({
     width: 0,
     height: 0,
   });
 
   useEffect(() => {
-    const canvas = canvasRef.current; // Get the custom canvas element
+    const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
 
-    // Update canvas dimensions when the window is resized
     const updateCanvasDimensions = () => {
       canvas.width = canvas.clientWidth;
       canvas.height = canvas.clientHeight;
       setCanvasDimensions({ width: canvas.width, height: canvas.height });
     };
 
-    window.addEventListener("resize", updateCanvasDimensions);
-    updateCanvasDimensions(); // Initial setup
+    // Initial setup
+    updateCanvasDimensions();
 
     const settings = {
       context, // Pass the custom canvas context
@@ -143,7 +162,7 @@ const HeaderCanvasAgents = () => {
     const sketch = () => {
       let agents = [];
 
-      for (let i = 0; i < 40; i++) {
+      for (let i = 0; i < 42; i++) {
         const x = randomRange(0, canvas.width);
         const y = randomRange(0, canvas.height);
         agents.push(new Agent(x, y));
@@ -182,7 +201,7 @@ const HeaderCanvasAgents = () => {
       };
     };
 
-    canvasSketch(sketch, settings);
+    const canvasInstance = canvasSketch(sketch, settings);
 
     class Point {
       constructor(x, y) {
@@ -194,7 +213,7 @@ const HeaderCanvasAgents = () => {
     class Agent {
       constructor(x, y) {
         this.pos = new Point(x, y);
-        this.r = randomRange(4, 10);
+        this.r = randomRange(8, 12);
         this.vel = new Point(randomRange(-1, 1), randomRange(-1, 1));
         this.fontFamily = getRandomFontFamily(); // Assign a random font family to the agent
         this.word = randomWords.pop(); // Assign a random word to the agent
@@ -230,6 +249,7 @@ const HeaderCanvasAgents = () => {
     }
     // Cleanup event listener when the component unmounts
     return () => {
+      canvasInstance.unmount(); // Cleanup the canvas sketch
       window.removeEventListener("resize", updateCanvasDimensions);
     };
   }, []); // Empty dependency array to run the effect only once
