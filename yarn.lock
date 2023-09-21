@@ -3638,7 +3638,7 @@ canvas-sketch-cli@^1.11.21:
 
 canvas-sketch@^0.7.7:
   version "0.7.7"
-  resolved "https://registry.npmjs.org/canvas-sketch/-/canvas-sketch-0.7.7.tgz"
+  resolved "https://registry.yarnpkg.com/canvas-sketch/-/canvas-sketch-0.7.7.tgz#55936c8c3756c6061d10ba8f63470ce3f92197d8"
   integrity sha512-gwvDjXrD1etmSiPa+TGuRzgC6gr8foFtwvPbqyYKEldY68XDEs8MDBoaIbYxbWeQiyLZBGau+P72do27pAhZaA==
   dependencies:
     convert-length "^1.0.1"

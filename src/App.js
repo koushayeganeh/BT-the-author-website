@@ -6,12 +6,9 @@ import {
 } from "react-router-dom";
 import HomeHifiDesktop from "./pages/HomeHifiDesktop";
 import AuthorHifiDesktop from "./pages/AuthorHifiDesktop";
-import SingleBookBUYHifiDes from "./pages/SingleBookBUYHifiDes";
 import ContactHifiDesktop from "./pages/ContactHifiDesktop";
-import SingleBlogHifiDesktop from "./pages/SingleBlogHifiDesktop";
 import SingleBlogPage from "./pages/SingleBlogPage";
 import BlogsHifiDesktop from "./pages/BlogsHifiDesktop";
-import SingleBookHifiDesktop from "./pages/SingleBookHifiDesktop";
 import SingleBookPage from "./pages/SingleBookPage";
 import LibraryHifiDesktop from "./pages/LibraryHifiDesktop";
 import { useEffect } from "react";
@@ -33,14 +30,10 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "";
+        title = "Barış Tayfün";
         metaDescription = "";
         break;
       case "/author":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/single-book-buy":
         title = "";
         metaDescription = "";
         break;
@@ -48,15 +41,7 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/single-blog":
-        title = "";
-        metaDescription = "";
-        break;
       case "/blogs":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/single-book":
         title = "";
         metaDescription = "";
         break;
@@ -84,12 +69,9 @@ function App() {
     <Routes>
       <Route path="/" element={<HomeHifiDesktop />} />
       <Route path="/author" element={<AuthorHifiDesktop />} />
-      <Route path="/single-book-buy" element={<SingleBookBUYHifiDes />} />
       <Route path="/contact" element={<ContactHifiDesktop />} />
-      <Route path="/single-blog" element={<SingleBlogHifiDesktop />} />
       <Route path="/blogs/:blogID" element={<SingleBlogPage />} />
       <Route path="/blogs" element={<BlogsHifiDesktop />} />
-      <Route path="/single-book" element={<SingleBookHifiDesktop />} />
       <Route path="/library/:bookID" element={<SingleBookPage />} />
       <Route path="/library" element={<LibraryHifiDesktop />} />
     </Routes>

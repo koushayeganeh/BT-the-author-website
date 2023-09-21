@@ -1,264 +1,127 @@
-import React, { useEffect, useRef, useState } from "react";
-import styled, { createGlobalStyle } from "styled-components";
-import canvasSketch from "canvas-sketch";
-import "./HeaderCanvasAgents.css";
+import React, { useEffect, useRef } from "react";
+import styled from "styled-components";
 
-// Define a GlobalStyle to include Google Fonts
-const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+const CanvasContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden; /* Ensure canvas fits within the container */
 `;
 
-// const CanvasContainer = styled.div`
-//   // Other styles for your canvas container
-//   .canvas {
-//     align-self: center;
-//     position: relative;
-//     width: 100%;
-//     height: 250px;
-//     padding: 0;
-//     margin: 0;
-//     overflow: hidden;
-//     box-sizing: border-box;
-//   }
-//   .interactive-visual-container {
-//     align-self: stretch;
-//     position: relative;
-//     width: 100%;
-//     height: 250px;
-//     padding: 0;
-//     margin: 0;
-//     overflow: hidden;
-//     box-sizing: border-box;
-//   }
-// `;
+// Create a styled canvas element
+const StyledCanvas = styled.canvas`
+  width: 100%;
+  height: 100%;
+  /* Add additional styles here */
+`;
 
 const HeaderCanvasAgents = () => {
   const canvasRef = useRef(null);
-  const [canvasDimensions, setCanvasDimensions] = useState({
-    width: 0,
-    height: 0,
-  });
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
 
-    const updateCanvasDimensions = () => {
+    function updateCanvasDimensions() {
       canvas.width = canvas.clientWidth;
       canvas.height = canvas.clientHeight;
-      setCanvasDimensions({ width: canvas.width, height: canvas.height });
-    };
+    }
 
-    // Initial setup
+    window.addEventListener("resize", updateCanvasDimensions);
     updateCanvasDimensions();
 
-    const settings = {
-      context, // Pass the custom canvas context
-      dimensions: [canvas.width, canvas.height], // Use canvas width and height
-      animate: true,
-      fps: 12,
-      playbackRate: "throttle",
-    };
+    const squares = [];
+    const circles = [];
 
-    // Your existing canvasSketch code here
+    function draw() {
+      context.clearRect(0, 0, canvas.width, canvas.height);
 
-    const randomRange = (min, max) => {
-      return Math.random() * (max - min) + min;
-    };
-
-    const mapRange = (value, inMin, inMax, outMin, outMax) => {
-      if (inMin === inMax) {
-        throw new Error("inMin and inMax can not be equale");
-      }
-      value = Math.min(Math.max(value, inMin), inMax);
-      const normalizedValue = (value - inMin) / (inMax - inMin);
-      return outMin + normalizedValue * (outMax - outMin);
-    };
-
-    const words = [
-      "Bağlantı",
-      "Aşk",
-      "Uyum",
-      "Enerji",
-      "Evren",
-      "Ruh",
-      "Doğa",
-      "Denge",
-      "Kucaklama",
-      "Farkındalık",
-      "Ruhaniyet",
-      "Teşekkür",
-      "Meditasyon",
-      "Empati",
-      "Yolculuk",
-      "Dönüşüm",
-      "Huzur",
-      "Kozmik",
-      "Aydınlanma",
-      "Birlik",
-      "Barış",
-      "Şuurluluk",
-      "İçiçelik",
-      "İyileşme",
-      "Sezgi",
-      "Yansıma",
-      "Titreşimler",
-      "Uyum",
-      "Bilinç",
-      "Amaç",
-      "Yeniden Doğuş",
-      "Rezonans",
-      "Birliktelik",
-      "Hazır Bulunuş",
-      "Kozmik Dans",
-      "Maneviyat",
-      "Yansıma",
-      "Büyüme",
-      "Sonsuzluk",
-      "İç Huzur",
-      "Bağlantı",
-      "Lütuf",
-      "Uyum",
-      "Denge",
-      "Yetki",
-      "Bereket",
-      "Ruhani Uyanış",
-      "Evrensel Sevgi",
-      "İç Işık",
-      "Senkronizasyon",
-      "Bilgelik",
-      "Teşekkür",
-      "Empati",
-      "İç Yolculuk",
-      "Yükselme",
-    ];
-
-    // Function to get a random font family
-    function getRandomFontFamily() {
-      const fontFamilies = [
-        "Shadows Into Light, cursive",
-        "Archivo Black, cursive",
-        "Permanent Marker, cursive",
-        "Schoolbell, cursive",
-        "Lobster, cursive",
-        // "Helvetica, sans-serif",
-        // "Verdana, sans-serif",
-        // "Georgia, serif",
-        // "Times New Roman, serif",
-        // "Courier New, monospace",
-      ];
-      return fontFamilies[Math.floor(Math.random() * fontFamilies.length)];
-    }
-
-    // Randomly select a word from the "words" array
-    const randomWords = new Array(60)
-      .fill(null)
-      .map(() => words[Math.floor(Math.random() * words.length)]);
-
-    const sketch = () => {
-      let agents = [];
-
-      for (let i = 0; i < 42; i++) {
-        const x = randomRange(0, canvas.width);
-        const y = randomRange(0, canvas.height);
-        agents.push(new Agent(x, y));
-      }
-
-      return ({ context, width, height }) => {
-        context.clearRect(0, 0, width, height);
-        // context.fillStyle = "black";
-        // context.fillRect(0, 0, width, height);
-        context.lineWidth = width * 0.0006;
-
-        for (let i = 0; i < agents.length; i++) {
-          for (let j = i + 1; j < agents.length; j++) {
-            const agent = agents[i];
-            const other = agents[j];
-
-            const dx = other.pos.x - agent.pos.x;
-            const dy = other.pos.y - agent.pos.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            if (distance > 100) continue;
-
-            context.lineWidth = mapRange(distance, 0, 100, 2, 0.5);
-
-            context.beginPath();
-            context.strokeStyle = "white";
-            context.moveTo(agent.pos.x, agent.pos.y);
-            context.lineTo(other.pos.x, other.pos.y);
-            context.stroke();
-          }
-        }
-
-        agents.forEach((agent) => {
-          agent.update(width, height);
-          agent.draw(context);
-        });
-      };
-    };
-
-    const canvasInstance = canvasSketch(sketch, settings);
-
-    class Point {
-      constructor(x, y) {
-        this.x = x;
-        this.y = y;
-      }
-    }
-
-    class Agent {
-      constructor(x, y) {
-        this.pos = new Point(x, y);
-        this.r = randomRange(8, 12);
-        this.vel = new Point(randomRange(-1, 1), randomRange(-1, 1));
-        this.fontFamily = getRandomFontFamily(); // Assign a random font family to the agent
-        this.word = randomWords.pop(); // Assign a random word to the agent
-      }
-
-      update(width, height) {
-        this.pos.x += this.vel.x;
-        this.pos.y += this.vel.y;
-
-        if (this.pos.x <= 0 || this.pos.x >= width) {
-          this.vel.x *= -1;
-        }
-        if (this.pos.y <= 0 || this.pos.y >= height) {
-          this.vel.y *= -1;
-        }
-      }
-
-      draw(context) {
-        context.save();
-        context.translate(this.pos.x, this.pos.y);
+      squares.forEach((square) => {
         context.beginPath();
-
-        // Set the text style
-        context.fillStyle = "white"; // Text color is white
-        context.font = `${this.r * 2}px ${this.fontFamily}`; // Random font size and the assigned font family
-        context.textAlign = "center"; // Center align the text
-
-        context.fillText(this.word, 0, 0);
-        context.lineWidth = 1;
+        context.rect(square.x, square.y, square.size, square.size);
+        context.strokeStyle = "white";
+        context.lineWidth = 2;
         context.stroke();
-        context.restore();
-      }
+
+        // Update square position with vibration
+        square.x += square.vibrationX;
+        square.y += square.vibrationY;
+
+        // Apply random vibration to the square's position
+        square.vibrationX = (Math.random() - 0.5) * square.vibrationStrength;
+        square.vibrationY = (Math.random() - 0.5) * square.vibrationStrength;
+      });
+
+      circles.forEach((circle) => {
+        context.beginPath();
+        context.arc(
+          circle.x + circle.size / 2,
+          circle.y + circle.size / 2,
+          circle.radius,
+          0,
+          2 * Math.PI
+        );
+        context.strokeStyle = "white";
+        context.lineWidth = 2;
+        context.stroke();
+      });
+
+      requestAnimationFrame(draw);
     }
-    // Cleanup event listener when the component unmounts
+
+    // Create 23 squares with random positions, dimensions, and vibration strength
+    for (let i = 0; i < 23; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const size = Math.random() * 1000 + 100; // Random size between 20 and 120
+      const vibrationStrength = Math.random() * 1 + 0; // Random strength between 0 and 1
+      let vibrationX = 0;
+      let vibrationY = 0;
+
+      const square = {
+        x,
+        y,
+        size,
+        vibrationStrength,
+        vibrationX,
+        vibrationY,
+        isHovered: false,
+      };
+
+      const circle = {
+        x,
+        y,
+        size,
+        radius: 0,
+      };
+
+      // Add event listeners for mouse enter and mouse leave on each square
+      canvas.addEventListener("mouseenter", () => {
+        square.isHovered = true;
+        circle.radius = size / 2; // Increase circle radius on hover
+      });
+      canvas.addEventListener("mouseleave", () => {
+        square.isHovered = false;
+        circle.radius = 0; // Reset circle radius
+      });
+
+      squares.push(square);
+      circles.push(circle);
+    }
+
+    // Start the animation loop
+    draw();
+
+    // Cleanup event listeners if necessary
     return () => {
-      canvasInstance.unmount(); // Cleanup the canvas sketch
       window.removeEventListener("resize", updateCanvasDimensions);
     };
-  }, []); // Empty dependency array to run the effect only once
+  }, []);
 
   return (
-    <div className="interactive-visual-container">
-      <GlobalStyle /> {/* Include the Google Fonts stylesheet */}
-      <canvas ref={canvasRef} id="myCanvas" className="canvas"></canvas>
-    </div>
+    <CanvasContainer>
+      <StyledCanvas ref={canvasRef} />
+    </CanvasContainer>
   );
 };
 

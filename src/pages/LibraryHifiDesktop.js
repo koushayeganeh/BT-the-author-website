@@ -45,7 +45,7 @@ const LibraryHifiDesktop = () => {
         onTabText4Click={onTabText4Click}
       />
       <section className="section14" id="page-hero-section">
-        <HeaderCanvasRects />
+        {/* <HeaderCanvasRects /> */}
       </section>
       <section className="section19" id="library-section">
         <div className="list6">
