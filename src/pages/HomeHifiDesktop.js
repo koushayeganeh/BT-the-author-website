@@ -47,8 +47,8 @@ const HomeHifiDesktop = () => {
       />
       <HeroContainer />
       <AboutCard />
-      <UpcomingEventCard />
       <UpcomingBooksContainer />
+      <UpcomingEventCard />
       <QuoteCardForm />
       <ContactAuthorFormContainer />
       <FooterContainer />

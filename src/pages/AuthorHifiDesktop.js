@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import TopBar from "../components/TopBar";
 import TextBox from "../components/TextBox";
 import FooterContainer from "../components/FooterContainer";
+import AuthorHeaderContainer from "../components/AuthorHeaderContainer";
 import "./AuthorHifiDesktop.css";
-import HeaderCanvasAgents from "../components/HeaderCanvasAgents";
 const AuthorHifiDesktop = () => {
   const navigate = useNavigate();
 
@@ -38,7 +38,11 @@ const AuthorHifiDesktop = () => {
         onTabText4Click={onTabText4Click}
       />
       <section className="page-header-container">
-        <HeaderCanvasAgents />
+        {/* <div className="div-with-background"></div>
+        <div className="overlay-image">
+          <img src="/persona-ex.png" alt="Overlay Image" />
+        </div> */}
+        <AuthorHeaderContainer />
       </section>
 
       <section className="section-texts-container">

@@ -2,7 +2,6 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import TopBar from "../components/TopBar";
 import CardContainer from "../components/CardContainer";
-import HeaderCanvasRects from "../components/HeaderCanvasRects";
 import FooterContainer from "../components/FooterContainer";
 import "./LibraryHifiDesktop.css";
 const LibraryHifiDesktop = () => {
@@ -44,9 +43,7 @@ const LibraryHifiDesktop = () => {
         onTabText3Click={onTabText3Click}
         onTabText4Click={onTabText4Click}
       />
-      <section className="section14" id="page-hero-section">
-        {/* <HeaderCanvasRects /> */}
-      </section>
+      <section className="section14" id="page-hero-section"></section>
       <section className="section19" id="library-section">
         <div className="list6">
           <CardContainer

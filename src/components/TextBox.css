@@ -24,7 +24,7 @@
 
 .textbox-frame-parent {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   flex: 1;
   align-items: flex-end;

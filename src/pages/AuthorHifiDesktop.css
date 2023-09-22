@@ -14,11 +14,11 @@
   align-self: stretch;
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 500px;
   padding: 0;
   margin: 0;
 
-  background: rgb(2, 0, 36);
+  /* background: rgb(2, 0, 36);
   background: -moz-linear-gradient(
     100deg,
     rgba(2, 0, 36, 1) 0%,
@@ -37,7 +37,33 @@
     rgba(65, 105, 135, 1) 32%,
     rgb(62, 139, 197) 72%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#44adff", GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#44adff", GradientType=1); */
+}
+
+.div-with-background {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/image-abst1.jpg");
+  background-size: cover; /* You can adjust this property to control how the image is displayed */
+  /* Additional background properties if needed */
+  background-repeat: no-repeat;
+  background-position: center bottom; /* Align background from the bottom */
+  width: 100%; /* Set a width for your div */
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: 0; /* Align the bottom of the overlay with the bottom of the background */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  height: 100%; /* Set the height to fit inside the container */
+  width: auto; /* Maintain aspect ratio */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.overlay-image img {
+  height: 80%;
 }
 
 .title1 {
