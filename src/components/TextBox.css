@@ -48,21 +48,17 @@
   gap: var(--gap-xl);
   mix-blend-mode: normal;
   width: 100%;
-  max-width: var(--max-inner-width);
   top: 0;
 }
 
 .textbox-list4 {
-  background-color: var(--grey);
   flex-direction: column;
-  padding: var(--padding-base) var(--padding-71xl);
   align-items: center;
   justify-content: center;
   z-index: 2;
   text-align: left;
-  font-size: var(--title-large-size);
-  color: var(--color-black);
-  font-family: var(--title-medium);
+  padding: 1rem;
+
 }
 
 @media (max-width: 960px) {
@@ -104,7 +100,6 @@
     gap: var(--gap-xl);
     mix-blend-mode: normal;
     width: 100%;
-    max-width: var(--max-inner-width);
     top: 0;
   }
 

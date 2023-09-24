@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  background-image: url("house-1.jpg");
+  background-image: url("library-1-back.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -46,17 +46,17 @@ const OverlayImageHome = styled.img`
 
 const OverlayImage = styled.img`
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: 100vw;
   height: 100%;
-  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 `;
 
-const AuthorHeaderContainer = () => {
+const LibraryHeaderContainer = () => {
   const canvasRef = useRef(null);
   const words = [
     "Yaşam", // Life
@@ -154,10 +154,10 @@ const AuthorHeaderContainer = () => {
         {isHovering && (
           <OverlayImageHome src="/persona-home.png" alt="Overlay Image" />
         )}
-        <OverlayImage src="/persona-ex1.png" alt="Overlay Image" />
+        <OverlayImage src="/library-1-front.png" alt="Overlay Image" />
       </OverlayContainer>
     </Container>
   );
 };
 
-export default AuthorHeaderContainer;
+export default LibraryHeaderContainer;
