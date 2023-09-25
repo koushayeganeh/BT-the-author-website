@@ -47,7 +47,7 @@ const LibraryHifiDesktop = () => {
       <section className="page-header-container">
         <LibraryHeaderContainer />
       </section>
-      <section className="section19" id="library-section">
+      <section className="section-library" id="library-section">
         <div className="list6">
           <CardContainer
             bookID="1"

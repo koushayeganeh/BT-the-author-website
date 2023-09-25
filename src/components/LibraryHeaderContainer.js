@@ -14,10 +14,10 @@ const Container = styled.div`
 
 const Canvas = styled.canvas`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 60%;
 `;
 
 const OverlayContainer = styled.div`
@@ -59,30 +59,30 @@ const OverlayImage = styled.img`
 const LibraryHeaderContainer = () => {
   const canvasRef = useRef(null);
   const words = [
-    "Yaşam", // Life
-    "Tarih", // History
-    "İlham", // Inspiration
-    "Biyografi", // Biography
-    "Keşif", // Discovery
-    "Başarı", // Success
-    "Değişim", // Change
-    "Öğrenme", // Learning
-    "İlerleme", // Progress
-    "İnsanlık", // Humanity
-    "Gelecek", // Future
-    "Miras", // Heritage
-    "Bilgelik", // Wisdom
-    "Başkaldırı", // Rebellion
-    "Aydınlanma", // Enlightenment
-    "Özgürlük", // Freedom
-    "Macera", // Adventure
-    "Dönüşüm", // Transformation
-    "İyilik", // Goodness
-    "Umutsuzluk", // Despair
-    "Zafer", // Victory
-    "Başarı Hikayesi", // Success Story
-    "Hayatın Anlamı", // Meaning of Life
-    "İnsan Hakları", // Human Rights
+    "Hayatın anlamı sorgulanır.",
+    "İnsanlar özgür iradeye sahiptir.",
+    "Gerçeklik subjektif bir kavramdır.",
+    "Aşkın sırrı her zaman çözülemez.",
+    "Bilgi sonsuz bir okyanustur.",
+    "Sanat duyguların diliyle konuşur.",
+    "Doğa insanın bir parçasıdır.",
+    "Zaman her şeyin ilacıdır.",
+    "Adalet kör olmalıdır.",
+    "Umut sonsuz bir kaynaktır.",
+    "İyilik her zaman karşılık beklemez.",
+    "Bireysellik ve toplumsal bağlar arasındaki denge hassastır.",
+    "Sessizlik de bir cevaptır.",
+    "Müzik ruhun gıdasıdır.",
+    "Düşler gerçeklerin öncüsüdür.",
+    "Güzellik gözde değil, ruhta bulunur.",
+    "Duygular karmaşık bir labirenttir.",
+    "Bilgelik yaşamın özüdür.",
+    "Sorular düşünmenin başlangıcıdır.",
+    "Kaosun içindeki düzeni bulmak bir sanattır.",
+    "Karanlıkta bile umut vardır.",
+    "Bir kitap bir dünyayı değiştirebilir.",
+    "Sözler bir köprüdür insanlar arasında.",
+    "Bir gülümseme bin kelimeye bedeldir.",
   ];
 
   const [isHovering, setIsHovering] = useState(false);
@@ -105,7 +105,7 @@ const LibraryHeaderContainer = () => {
       Math.floor(Math.random() * (max - min + 1)) + min;
 
     const wordObjects = words.map((word) => {
-      const fontSize = getRandomInt(18, 72);
+      const fontSize = getRandomInt(12, 32);
       const speed = getRandomInt(1, 10);
       const x = getRandomInt(0, canvas.width); // Random initial x position within the canvas
       const y = getRandomInt(0, canvas.height);
@@ -127,15 +127,15 @@ const LibraryHeaderContainer = () => {
 
       wordObjects.forEach((wordObj) => {
         ctx.font = `${wordObj.fontSize}px 'Bebas Neue', sans-serif`;
-        ctx.fillText(wordObj.word, wordObj.x, wordObj.y);
 
-        wordObj.x += wordObj.speed * 0.03;
+        wordObj.x -= wordObj.speed * 0.04;
 
-        if (wordObj.x > canvas.width) {
-          // Reset word position when it goes out of the canvas
-          wordObj.x = -ctx.measureText(wordObj.word).width;
+        if (wordObj.x + ctx.measureText(wordObj.word).width < 0) {
+          // Reset word position when it goes out of the canvas to the left
+          wordObj.x = canvas.width;
           wordObj.y = getRandomInt(0, canvas.height);
         }
+        ctx.fillText(wordObj.word, wordObj.x, wordObj.y);
       });
 
       requestAnimationFrame(animate);

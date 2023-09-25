@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import TopBar from "../components/TopBar";
 import ArticleCard from "../components/ArticleCard";
 import FooterContainer from "../components/FooterContainer";
+import BlogsHeaderContainer from "../components/BlogsHeaderContainer";
 import "./BlogsHifiDesktop.css";
 const BlogsHifiDesktop = () => {
   const navigate = useNavigate();
@@ -47,13 +48,8 @@ const BlogsHifiDesktop = () => {
         onTabText3Click={onTabText3Click}
         onTabText4Click={onTabText4Click}
       />
-      <section className="section10" id="page-hero-section">
-        <img
-          className="image-container-icon4"
-          alt=""
-          id="page-hero-img"
-          src="/image-container@2x.png"
-        />
+      <section className="page-header-container">
+        <BlogsHeaderContainer />
       </section>
       <div className="blogs-main-container">
         <section className="frame-section">

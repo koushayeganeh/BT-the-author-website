@@ -77,10 +77,17 @@
 }
 
 .blogs-hifi-desktop {
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
   position: relative;
   flex-direction: column;
   padding: var(--padding-61xl) 0 0;
   justify-content: flex-start;
+  padding: 0;
+  margin: 0;
 }
 
 @media (max-width: 960px) {
