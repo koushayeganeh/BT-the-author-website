@@ -20,7 +20,7 @@
 
 .title42 {
   margin: 0;
-  align-self: stretch;
+  align-self: center;
   position: relative;
   font-size: var(--font-size-heading-large);
   line-height: var(--font-size-heading-large-height);
@@ -54,7 +54,7 @@
   flex-direction: column;
   padding: var(--padding-xl) 0;
   justify-content: center;
-  gap: var(--gap-21xl);
+  gap: 1.6rem;
   z-index: 1;
   font-size: var(--title-large-size);
   color: var(--color-black);
@@ -97,7 +97,7 @@
 
 .section19-inner-content {
   align-self: stretch;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(218, 218, 218, 0.8);
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -113,7 +113,7 @@
   width: 100%;
   max-width: var(--max-inner-width);
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 @media (max-width: 960px) {

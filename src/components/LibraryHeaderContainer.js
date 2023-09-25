@@ -106,7 +106,7 @@ const LibraryHeaderContainer = () => {
 
     const wordObjects = words.map((word) => {
       const fontSize = getRandomInt(12, 32);
-      const speed = getRandomInt(1, 10);
+      const speed = getRandomInt(1, 7);
       const x = getRandomInt(0, canvas.width); // Random initial x position within the canvas
       const y = getRandomInt(0, canvas.height);
 
@@ -128,7 +128,7 @@ const LibraryHeaderContainer = () => {
       wordObjects.forEach((wordObj) => {
         ctx.font = `${wordObj.fontSize}px 'Bebas Neue', sans-serif`;
 
-        wordObj.x -= wordObj.speed * 0.04;
+        wordObj.x -= wordObj.speed * 0.03;
 
         if (wordObj.x + ctx.measureText(wordObj.word).width < 0) {
           // Reset word position when it goes out of the canvas to the left
@@ -151,10 +151,10 @@ const LibraryHeaderContainer = () => {
     >
       <Canvas ref={canvasRef} />
       <OverlayContainer>
-        {isHovering && (
-          <OverlayImageHome src="/persona-home.png" alt="Overlay Image" />
-        )}
         <OverlayImage src="/library-1-front.png" alt="Overlay Image" />
+        {isHovering && (
+          <OverlayImageHome src="/library-overlay.png" alt="Overlay Image" />
+        )}
       </OverlayContainer>
     </Container>
   );
