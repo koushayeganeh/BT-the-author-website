@@ -183,7 +183,7 @@
   .article13 {
     border-radius: var(--br-5xs);
     background-color: var(--white);
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: var(--padding-5xs);
     align-items: flex-start;
     align-self: center;

@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  background-image: url("house-1.jpg");
+  background-image: url("house-1-color.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;

@@ -60,7 +60,7 @@ body {
   /* --secondary: #151957; */
   --secondary: #09001c;
   /* --primary: #44adff; */
-  --primary: #214f83;
+  --primary: #104e6b;
   --grey: #f0f4f7;
   --color-gray-200: rgba(0, 0, 0, 0.5);
   --color-gray-300: rgba(0, 0, 0, 0.1);
@@ -116,7 +116,7 @@ body {
   align-self: stretch;
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 600px;
   padding: 0;
   margin: 0;
 

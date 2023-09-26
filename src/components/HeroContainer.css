@@ -12,18 +12,17 @@
 }
 .section17 {
   align-self: stretch;
-  height: 32.5rem;
+  height: 600px;
 }
 
 @media (max-width: 960px) {
   .section17 {
-    height: 20.5rem;
+    height: 400px;
   }
 }
 
 @media (max-width: 768px) {
   .section17 {
-    height: 6.5rem;
-    display: none;
+    height: 200px;
   }
 }

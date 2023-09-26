@@ -4,6 +4,7 @@ import TopBar from "../components/TopBar";
 import ContactAuthorFormContainer from "../components/ContactAuthorFormContainer";
 import FooterContainer from "../components/FooterContainer";
 import "./ContactHifiDesktop.css";
+import ContactHeaderContainer from "../components/ContactHeaderContainer";
 const ContactHifiDesktop = () => {
   const navigate = useNavigate();
 
@@ -44,14 +45,8 @@ const ContactHifiDesktop = () => {
         onTabText3Click={onTabText3Click}
         onTabText4Click={onTabText4Click}
       />
-      <section className="section5" id="page-hero-section">
-        <img
-          className="image-container-icon2"
-          alt=""
-          id="page-hero-img"
-          src="/image-container@2x.png"
-        />
-        <img className="vector-icon" alt="" src="/vector-2002.svg" />
+      <section className="page-header-container">
+        <ContactHeaderContainer />
       </section>
       <ContactAuthorFormContainer />
       <FooterContainer />

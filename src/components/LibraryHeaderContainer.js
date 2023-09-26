@@ -21,27 +21,25 @@ const Canvas = styled.canvas`
 `;
 
 const OverlayContainer = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   height: 100%;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  position: relative;
+  background-image: url("library-1-front.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  overflow: hidden;
 `;
 
 const OverlayImageHome = styled.img`
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   height: 100%;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  position: relative;
+  background-image: url("library-overlay.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  overflow: hidden;
 `;
 
 const OverlayImage = styled.img`
@@ -151,9 +149,10 @@ const LibraryHeaderContainer = () => {
     >
       <Canvas ref={canvasRef} />
       <OverlayContainer>
-        <OverlayImage src="/library-1-front.png" alt="Overlay Image" />
+        {/* <OverlayImage src="/library-1-front.png" alt="Overlay Image" /> */}
         {isHovering && (
-          <OverlayImageHome src="/library-overlay.png" alt="Overlay Image" />
+          // <OverlayImageHome src="/library-overlay.png" alt="Overlay Image" />
+          <OverlayImageHome></OverlayImageHome>
         )}
       </OverlayContainer>
     </Container>
