@@ -85,6 +85,7 @@ const LogoImage = styled.img`
   &:hover {
     border: 4px solid var(--primary);
     box-sizing: border-box;
+    cursor: pointer;
   }
 `;
 
@@ -99,6 +100,11 @@ const Title = styled.h3`
   font-weight: 600;
   padding: 4rem 1rem;
   font-size: var(--font-size-title-larg);
+
+  &:hover {
+    color: var(--primary);
+    cursor: pointer;
+  }
 
   @media (max-width: 768px) {
     font-size: var(--font-size-title-small);
@@ -246,7 +252,7 @@ const TopBar = ({
       className={showMenu ? "mobile-menu-open" : ""}
     >
       <TopBarContent>
-        <LogoContainer>
+        <LogoContainer onClick={onTabText0Click}>
           <LogoImage alt="" src="/rectangle-4137@2x.png" />
           <Title id="logo-typo">Barış Tayfün</Title>
         </LogoContainer>

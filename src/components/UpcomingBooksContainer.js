@@ -1,7 +1,161 @@
-import { useCallback } from "react";
+import React, { useCallback } from "react";
+import styled, { keyframes } from "styled-components";
 import { useNavigate } from "react-router-dom";
 import CardContainer from "./CardContainer";
-import "./UpcomingBooksContainer.css";
+
+const changeColor = keyframes`
+  0% {
+    color: var(--primary);
+  }
+
+  to {
+    color: var(--secondary);
+  }
+`;
+
+const changeColorOut = keyframes`
+  0% {
+    color: var(--primary);
+  }
+
+  to {
+    color: var(--secondary);
+  }
+`;
+
+const StyledUpcomingBooksContainer = styled.section`
+  align-self: stretch;
+  background-color: var(--grey);
+  background-image: url("books-papers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-13xl) var(--padding-71xl);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: var(--gap-41xl);
+  z-index: 4;
+  text-align: left;
+  font-size: var(--heading-large-size);
+  color: var(--secondary);
+  font-family: var(--title-medium);
+
+  @media (max-width: 1400px) {
+    padding: var(--padding-13xl) var(--padding-base);
+  }
+
+  @media (max-width: 768px) {
+    padding: var(--padding-13xl) var(--padding-5xs);
+  }
+`;
+
+const InnerContent = styled.div`
+  align-self: stretch;
+  background-color: rgba(218, 218, 218, 0.8);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: var(--gap-41xl);
+  z-index: 4;
+  text-align: left;
+  font-size: var(--heading-large-size);
+  color: var(--secondary);
+  font-family: var(--title-medium);
+  width: 100%;
+  max-width: var(--max-inner-width);
+  padding: 2rem;
+  border-radius: 0.5rem;
+
+  @media (max-width: 1400px) {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 var(--padding-5xs);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 var(--padding-5xs);
+    gap: var(--gap-xl);
+  }
+`;
+
+const Container = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 0;
+`;
+
+const Title = styled.h1`
+  margin: 0;
+  align-self: center;
+  position: relative;
+  font-size: var(--font-size-heading-large);
+  line-height: var(--font-size-heading-large-height);
+  font-weight: 700;
+  font-family: var(--font-sans-serif);
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+
+  &:hover {
+    animation: 0.4s ease-in-out 0s 1 forwards ${changeColor};
+  }
+
+  &:not(:hover) {
+    animation: 0.2s ease-in-out 0s 1 forwards ${changeColorOut};
+  }
+
+  @media (max-width: 1400px) {
+    font-size: var(--font-size-heading-medium);
+    line-height: var(--font-size-heading-medium-height);
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-heading-small);
+    line-height: var(--font-size-heading-small-height);
+  }
+`;
+
+const List = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  padding: var(--padding-xl) 0;
+  justify-content: center;
+  gap: 1.6rem;
+  z-index: 1;
+  font-size: var(--title-large-size);
+  color: var(--color-black);
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const SectionChild = styled.div`
+  position: absolute;
+  margin: 0 !important;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 0.03rem;
+  z-index: 2;
+`;
+
 const UpcomingBooksContainer = () => {
   const navigate = useNavigate();
 
@@ -17,14 +171,14 @@ const UpcomingBooksContainer = () => {
   }, [navigate]);
 
   return (
-    <section className="section19" id="library-section">
-      <div className="section19-inner-content">
-        <div className="container9">
-          <h1 className="title42" id="library-heading" onClick={onTitleClick}>
+    <StyledUpcomingBooksContainer id="library-section">
+      <InnerContent>
+        <Container>
+          <Title id="library-heading" onClick={onTitleClick}>
             Yakında Çıkacak Kitaplar
-          </h1>
-        </div>
-        <div className="list6">
+          </Title>
+        </Container>
+        <List>
           <CardContainer
             bookID="1"
             title="Sessiz Tanıkların Gözüyle"
@@ -71,9 +225,9 @@ const UpcomingBooksContainer = () => {
             propBackgroundImage="url('/image-container4@3x.png')"
             onRowContainerClick={() => onRowContainerClick(4)}
           />
-        </div>
-      </div>
-    </section>
+        </List>
+      </InnerContent>
+    </StyledUpcomingBooksContainer>
   );
 };
 

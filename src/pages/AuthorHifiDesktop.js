@@ -120,7 +120,7 @@ const AuthorHifiDesktop = () => {
               className="image-11-icon"
               alt=""
               id="author-desk-img"
-              src="/image-11@2x.png"
+              src="/image-11@2x.jpg"
             />
           </div>
         </div>
