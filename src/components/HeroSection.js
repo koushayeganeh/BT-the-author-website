@@ -1,5 +1,95 @@
 import React, { useEffect, useState } from "react";
-import "./HeroSection.css";
+import styled from "styled-components";
+
+const HeroContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+`;
+
+const OverLayColor = styled.div`
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(
+    100deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(65, 105, 135, 1) 21%,
+    rgba(68, 173, 255, 1) 42%
+  );
+  background: -webkit-linear-gradient(
+    100deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(65, 105, 135, 1) 21%,
+    rgba(68, 173, 255, 1) 42%
+  );
+  background: linear-gradient(
+    100deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(65, 105, 135, 1) 21%,
+    rgba(68, 173, 255, 1) 42%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#44adff", GradientType=1);
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("./hero-bg-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+`;
+
+const Hero = styled.section`
+  position: relative;
+  width: 140%;
+  background-color: #071a28;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  color: white;
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  margin: 0 -10%;
+  overflow: hidden;
+  gap: 2rem;
+
+  @media (max-width: 960px) {
+    font-size: 2rem;
+    gap: 2rem;
+    font-size: 2rem;
+  }
+  @media (max-width: 768px) {
+    position: relative;
+    width: 140%;
+    font-size: 1.2rem;
+    margin: 0 -10%;
+    gap: 1.2rem;
+  }
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 3;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 3;
+    overflow: hidden;
+  }
+`;
 
 const HeroSection = () => {
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
@@ -176,18 +266,8 @@ const HeroSection = () => {
   };
 
   return (
-    <div
-      className="hero-container"
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "100%",
-        backgroundColor: "black",
-        overflow: "hidden",
-      }}
-    >
-      <div
-        className="overlay-color"
+    <HeroContainer>
+      <OverLayColor
         style={{
           position: "absolute",
           top: "0",
@@ -199,8 +279,8 @@ const HeroSection = () => {
           overflow: "hidden",
           pointerEvents: "none",
         }}
-      ></div>
-      <section className="hero" id="heroSection">
+      ></OverLayColor>
+      <Hero id="heroSection">
         {words.map((word, index) => (
           <span
             className={`word ${
@@ -220,9 +300,9 @@ const HeroSection = () => {
             {word.word}
           </span>
         ))}
-      </section>
+      </Hero>
 
-      <div className="overlay">
+      <Overlay>
         <div
           className="image-container"
           id="categoryImage"
@@ -239,8 +319,8 @@ const HeroSection = () => {
             }}
           />
         </div>
-      </div>
-    </div>
+      </Overlay>
+    </HeroContainer>
   );
 };
 

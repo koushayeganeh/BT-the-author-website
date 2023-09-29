@@ -2,28 +2,6 @@ import React, { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styled, { keyframes, css } from "styled-components";
 
-const slideIn = keyframes`
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-`;
-
-const slideOut = keyframes`
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-`;
-
 const shadowInsetCenter = keyframes`
   0% {
     box-shadow: inset 0 0 0 0 transparent;

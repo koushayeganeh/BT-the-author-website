@@ -1,9 +1,22 @@
 @keyframes shadow-inset-center {
   0% {
     box-shadow: inset 0 0 0 0 transparent;
+    background-color: var(--primary);
   }
   to {
     box-shadow: inset 0 0 14px 0 rgb(0 0 0/50%);
+    background-color: var(--polar);
+  }
+}
+
+@keyframes shadow-inset-center-out {
+  0% {
+    box-shadow: inset 0 0 14px 0 rgb(0 0 0/50%);
+    background-color: var(--polar);
+  }
+  to {
+    box-shadow: inset 0 0 0 0 transparent;
+    background-color: var(--primary);
   }
 }
 
@@ -51,9 +64,15 @@
   justify-content: center;
 }
 .primary1:hover {
-  animation: 0.7s ease-in-out 0s 1 normal none shadow-inset-center;
+  animation: 0.4s ease-in-out 0s 1 forwards shadow-inset-center;
   opacity: 1;
 }
+
+.primary1:not(:hover) {
+  animation: 0.4s ease-in-out 0s 1 forwards shadow-inset-center-out;
+  opacity: 1;
+}
+
 .button1,
 .image-container-group {
   display: flex;
@@ -138,16 +157,19 @@
 }
 
 .single-book-buy-overlay {
-  position: absolute;
-  margin: 0 !important;
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--secondary);
+  background-color: rgba(0, 24, 43, 0.911);
   width: 100%;
-  height: 100%;
-  opacity: 0.85;
+  height: 100vh; /* Set the height to 100% of the viewport height */
   cursor: pointer;
   z-index: 5;
+  overflow: hidden; /* Optional: Hide any content that overflows the overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 960px) {

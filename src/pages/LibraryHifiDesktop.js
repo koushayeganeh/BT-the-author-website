@@ -58,6 +58,7 @@ const LibraryHifiDesktop = () => {
             labelText1="Dram"
             labelText2="Sosyal"
             labelText3="Politik"
+            propBackgroundImage="url('/image-container3@3x.png')"
             onRowContainerClick={() => onRowContainerClick(1)}
           />
           <CardContainer
@@ -69,6 +70,7 @@ const LibraryHifiDesktop = () => {
             labelText1="Duygusal"
             labelText2="Karakterler"
             labelText3="Aile ve İlişkiler"
+            propBackgroundImage="url('/image-container3@3x.png')"
             onRowContainerClick={() => onRowContainerClick(2)}
           />
           <CardContainer

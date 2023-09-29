@@ -70,7 +70,6 @@ const ShoppingCard = () => {
           </div>
         </div>
       </div>
-      <img className="section-child13" alt="" src="/vector-200.svg" />
     </div>
   );
 };

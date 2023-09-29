@@ -1,23 +1,37 @@
 import React, { useState, useRef } from "react";
 import SocialLinksContainer from "../components/SocialLinksContainer";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 const shadowInsetCenter = keyframes`
   0% {
     box-shadow: inset 0 0 0 0 transparent;
+    background-color: var(--primary);
   }
   to {
     box-shadow: inset 0 0 14px 0 rgb(0 0 0/50%);
+    background-color: var(--polar);
   }
-`;
+  `;
 
 const shadowInsetCenterOut = keyframes`
   0% {
     box-shadow: inset 0 0 14px 0 rgb(0 0 0/50%);
+    background-color: var(--polar);
   }
   to {
     box-shadow: inset 0 0 0 0 transparent;
+    background-color: var(--primary);
   }
+`;
+
+const shadowInsetCenterAnimation = css`
+  animation: 0.4s ease-in-out 0s 1 forwards ${shadowInsetCenter};
+  opacity: 1;
+`;
+
+const shadowInsetCenterOutAnimation = css`
+  animation: 0.2s ease-in-out 0s 1 forwards ${shadowInsetCenterOut};
+  opacity: 1;
 `;
 
 const Section = styled.section`
@@ -116,14 +130,10 @@ const Button = styled.button`
   justify-content: center;
 
   &:hover {
-    animation: 0.4s ease-in-out 0s 1 forwards ${shadowInsetCenter};
-    opacity: 1;
+    ${shadowInsetCenterAnimation};
   }
-
   &:not(:hover) {
-    animation: 0.2s ease-in-out 0s 1 forwards ${shadowInsetCenterOut};
-    opacity: 1;
-  }
+    ${shadowInsetCenterOutAnimation};
 `;
 
 const FormAndSocialContainer = styled.div`

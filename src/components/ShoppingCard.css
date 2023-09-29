@@ -56,7 +56,6 @@
 .section-child13,
 .section24 {
   margin: 0 !important;
-  position: absolute;
   left: 0;
   overflow: hidden;
 }
@@ -86,7 +85,6 @@
   font-size: var(--lable-large-size);
   color: var(--color-black);
   font-family: var(--title-medium);
-  opacity: 1;
 }
 
 @media (max-width: 960px) {

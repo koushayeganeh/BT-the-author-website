@@ -32,7 +32,7 @@
 
 .card {
   border-radius: var(--br-7xs);
-  background-color: var(--color-gray-100);
+  /* background-color: var(--color-gray-100); */
   width: 78.75rem;
   overflow: hidden;
   padding: var(--padding-base);
@@ -94,7 +94,7 @@
 
 .main-author-content-inner-container {
   align-self: stretch;
-  background-color: var(--grey);
+  /* background-color: var(--grey); */
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -113,7 +113,7 @@
 
 .main-author-content-container {
   align-self: stretch;
-  background-color: var(--grey);
+  /* background-color: var(--grey); */
   overflow: hidden;
   display: flex;
   flex-direction: row;

@@ -69,7 +69,7 @@ const SingleBlogPage = () => {
       <section className="list4" id="bio-section">
         <div className="article13">
           <div className="frame-parent">
-            <div className="title-parent10">{blog.contentJSX}</div>
+            <div>{blog.contentJSX}</div>
           </div>
         </div>
       </section>

@@ -143,19 +143,6 @@ const List = styled.div`
   }
 `;
 
-const SectionChild = styled.div`
-  position: absolute;
-  margin: 0 !important;
-  width: 100%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  overflow: hidden;
-  height: 0.03rem;
-  z-index: 2;
-`;
-
 const UpcomingBooksContainer = () => {
   const navigate = useNavigate();
 
@@ -188,6 +175,7 @@ const UpcomingBooksContainer = () => {
             labelText1="Dram"
             labelText2="Sosyal"
             labelText3="Politik"
+            propBackgroundImage="url('/image-container3@3x.png')"
             onRowContainerClick={() => onRowContainerClick(1)}
           />
           <CardContainer
@@ -199,6 +187,7 @@ const UpcomingBooksContainer = () => {
             labelText1="Duygusal"
             labelText2="Karakterler"
             labelText3="Aile ve İlişkiler"
+            propBackgroundImage="url('/image-container3@3x.png')"
             onRowContainerClick={() => onRowContainerClick(2)}
           />
           <CardContainer

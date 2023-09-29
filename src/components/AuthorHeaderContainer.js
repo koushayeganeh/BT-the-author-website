@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  background-image: url("house-1-color.jpg");
+  background-image: url("house-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -154,7 +154,7 @@ const AuthorHeaderContainer = () => {
         {isHovering && (
           <OverlayImageHome src="/persona-home.png" alt="Overlay Image" />
         )}
-        <OverlayImage src="/persona-ex1.png" alt="Overlay Image" />
+        <OverlayImage src="/persona-ex2.png" alt="Overlay Image" />
       </OverlayContainer>
     </Container>
   );

@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import TopBar from "../components/TopBar";
-import HeroContainer from "../components/HeroContainer";
+import HeroSection from "../components/HeroSection";
 import AboutCard from "../components/AboutCard";
 import UpcomingEventCard from "../components/UpcomingEventCard";
 import UpcomingBooksContainer from "../components/UpcomingBooksContainer";
@@ -45,7 +45,9 @@ const HomeHifiDesktop = () => {
         onTabText3Click={onTabText3Click}
         onTabText4Click={onTabText4Click}
       />
-      <HeroContainer />
+      <section className="page-header-container page-header-container-home-overide">
+        <HeroSection />
+      </section>
       <AboutCard />
       <UpcomingEventCard />
       <UpcomingBooksContainer />

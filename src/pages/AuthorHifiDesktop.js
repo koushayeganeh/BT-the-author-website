@@ -73,7 +73,7 @@ const AuthorHifiDesktop = () => {
           </div>
 
           <div className="div-side-container">
-            <h2 className="author-side-title">Yazarken dinlediklerim</h2>
+            <h2 className="author-side-title">Yazarken dinledikler</h2>
             <div className="side-feature-box">
               <Spotify
                 loading="lazy"
@@ -81,9 +81,15 @@ const AuthorHifiDesktop = () => {
                 width={"100%"}
               />
             </div>
-            <h2 className="author-side-title">Sosyal medya bağlantılarım</h2>
+            <h2 className="author-side-title">Sosyal medyada</h2>
             <div className="side-feature-box">
-              <div style={{ display: "flex", justifyContent: "center" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  width: "100%",
+                }}
+              >
                 <FacebookEmbed
                   loading="lazy"
                   url="https://www.facebook.com/photo/?fbid=10160308287280425&set=a.10151077445160425"
@@ -91,7 +97,7 @@ const AuthorHifiDesktop = () => {
                 />
               </div>
             </div>
-            {/* <div className="side-feature-box">
+            <div className="side-feature-box">
               <div
                 style={{
                   display: "flex",
@@ -105,7 +111,7 @@ const AuthorHifiDesktop = () => {
                   width={"100%"}
                 />
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
@@ -113,7 +119,7 @@ const AuthorHifiDesktop = () => {
       <section className="section1" id="author-desk-section">
         <div className="container">
           <h1 className="title1" id="author-desk-heading">
-            Çalışma Alanım
+            Çalışma Alanı
           </h1>
           <div className="card">
             <img

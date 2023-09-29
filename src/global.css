@@ -152,4 +152,8 @@ body {
   .page-header-container {
     height: 300px;
   }
+
+  .page-header-container-home-overide {
+    height: 200px;
+  }
 }

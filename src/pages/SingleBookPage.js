@@ -105,8 +105,9 @@ const SingleBookPage = () => {
       </section>
       {isOverlayVisible && (
         <>
-          <div className="single-book-buy-overlay" onClick={hideOverlay} />
-          <ShoppingCard />
+          <div className="single-book-buy-overlay" onClick={hideOverlay}>
+            <ShoppingCard />
+          </div>
         </>
       )}
 

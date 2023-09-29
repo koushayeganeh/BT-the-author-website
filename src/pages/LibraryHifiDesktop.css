@@ -15,6 +15,9 @@
 .list6 {
   width: 100%;
   max-width: var(--max-inner-width);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .section-library {
@@ -42,7 +45,10 @@
 }
 
 @media (max-width: 768px) {
-  .section19 {
-    padding: 0;
+  .section-library {
+    padding: var(--padding-13xl) var(--padding-5xs);
+  }
+  .list6 {
+    gap: 1rem;
   }
 }
